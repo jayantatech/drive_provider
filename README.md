@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Main color blue deep - #415FF2
+color blue light blue - #D3DAFC
+color blue deep light blue - #B5C0F9
+background white - #F9FAFC
+plan background white - #fffff
+black - #060B20
+
+        white: "#FFFFFF",
+        bg_main: "#060B20",
+        blue_min: "#415FF2",
+        blue_light: "#D3DAFC",
+        blue_deep_light: "#B5C0F9",
+        black_main: "#060B20",
