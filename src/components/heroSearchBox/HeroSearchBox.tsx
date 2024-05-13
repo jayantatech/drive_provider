@@ -1,12 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import DatePicker from "../datePicker/DatePicker";
 import SelectDropdown from "../selectDropdown/SelectDropdown";
+import DateAndTimePicker from "../dateAndTimePicker/DateAndTimePicker";
+import HeroSearchboxTabs from "../heroSearchboxTabs/HeroSearchboxTabs";
 
 const HeroSearchBox = () => {
   const [formData, setFormData] = useState({
     location: "",
-    date: undefined,
+    pickupInfo: {},
+    dropOffInfo: {},
   });
 
   const handleLocation = (value: string) => {
@@ -16,11 +18,24 @@ const HeroSearchBox = () => {
       location: value,
     });
   };
-  const handleDate = (value) => {
-    console.log("this is the value", value);
+  const handlePickupInfo = (value: object) => {
+    if (!value.date && !value.time) return null;
     setFormData({
       ...formData,
-      date: value,
+      pickupInfo: {
+        pickupDate: value?.date,
+        pickupTime: value.time,
+      },
+    });
+  };
+  const handleDropOffInfo = (value: object) => {
+    if (!value.date && !value.time) return null;
+    setFormData({
+      ...formData,
+      dropOffInfo: {
+        dropOffDate: value?.date,
+        dropOffTime: value.time,
+      },
     });
   };
   const handleFormSubmit = (event: React.FormEvent) => {
@@ -30,25 +45,36 @@ const HeroSearchBox = () => {
   };
 
   return (
-    <form
-      className=" w-[80%] h-[140px] bg-blue-600 rounded-[10px] p-2 flex items-center justify-center gap-3"
-      onSubmit={(event) => handleFormSubmit(event)}
-    >
-      <SelectDropdown
-        selectionItems={["Kolkata", "Bengaluru"]}
-        selectionLabel="location"
-        selectionPlaceHolder="Select Your City"
-        onChange={handleLocation}
-      />
-      <DatePicker
-        placeholderText="Pick-up date - Drop-off date"
-        onChange={handleDate}
-      />
-
-      <button type="submit" className="bg-red-200 px-2 py-2 rounded-[5px]">
-        this is Ok
-      </button>
-    </form>
+    <div className="w-[1030px] h-[160px] flex flex-col items-start justify-start">
+      <HeroSearchboxTabs tabVehicles={["Cars", "Bikes"]} />
+      <div
+        className="h-[80px] bg-white rounded-r-[6px] rounded-bl-[6px] p-2 flex items-center justify-center gap-2 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 "
+        onSubmit={(event) => handleFormSubmit(event)}
+      >
+        <SelectDropdown
+          selectionItems={["Kolkata", "Bengaluru"]}
+          selectionLabel="location"
+          selectionPlaceHolder="Select Your City"
+          onChange={handleLocation}
+        />{" "}
+        <DateAndTimePicker
+          dateInputPlaceholder="Pick-up Date"
+          timeInputPlaceholder="Pick-up Time"
+          onChange={handlePickupInfo}
+        />
+        <DateAndTimePicker
+          dateInputPlaceholder="Drop-off Date"
+          timeInputPlaceholder="Drop-off Time"
+          onChange={handleDropOffInfo}
+        />
+        <button
+          type="submit"
+          className="bg-blue_main text-white px-6 py-2 rounded-[5px] flex items-center justify-center"
+        >
+          Search
+        </button>
+      </div>
+    </div>
   );
 };
 
