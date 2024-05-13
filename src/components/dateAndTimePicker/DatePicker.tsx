@@ -26,7 +26,7 @@ export default function DatePicker({
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <button className="min-w-[165px] flex bg-white items-center justify-start h-full rounded-[5px] px-3 gap-2">
+        <button className="min-w-[165px] max-md:w-[190px] flex bg-white items-center justify-start h-full rounded-[5px] px-3 gap-2">
           <MdDateRange className="text-[19px] -mt-1" />
           <span className="text-[15px]">
             {" "}
