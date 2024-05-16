@@ -9,7 +9,7 @@ import { UserProfileButton } from "../userProfileButton/UserProfileButton";
 import { ButtonMain } from "../button/Button";
 import { logout } from "@/auth/actions";
 
-export const MobileNav = ({ userInfo }: { userInfo: object }) => {
+export const MobileNav = ({ userInfo }: { userInfo: object | undefined }) => {
   return (
     <Sheet>
       <SheetTrigger>
@@ -31,13 +31,13 @@ export const MobileNav = ({ userInfo }: { userInfo: object }) => {
             </div>
           ) : (
             <div className=" hidden max-md:block">
-              <div className=" absolute bottom-8 left-0 w-full h-[60px] bg-white flex items-center justify-between p-2 rounded-[5px]">
+              <div className=" absolute bottom-8 left-0 w-full h-[60px] bg-white text-black flex items-center justify-between p-2 rounded-[5px]">
                 <div className="min-w-[75%] h-full">
                   <ButtonMain
                     text="logout"
                     isOutline={true}
                     functionCall={() => logout()}
-                    customClass={"text-blue_main  hover:text-white"}
+                    customClass={"hover:text-white text-[#415FF2] "}
                   />
                 </div>
 
