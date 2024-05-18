@@ -1,3 +1,3 @@
-import Car from "./car.png";
+import Car from "./car_two.png";
 
 export { Car };
