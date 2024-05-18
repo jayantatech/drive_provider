@@ -15,7 +15,7 @@ export const UserProfileButton = ({ userInfo }: { userInfo: object }) => {
   };
   return (
     <div
-      className=" relative w-[55px] h-[55px] max-lg:w-[50px] max-lg:h-[50px] rounded-[5px] border-[3px] border-blue_main cursor-pointer overflow-hidden "
+      className=" relative w-[55px] h-[55px] max-lg:w-[50px] max-lg:h-[50px] rounded-[5px] border-[3px] border-color_main cursor-pointer overflow-hidden "
       onClick={() => profileClicked()}
     >
       <span

@@ -21,10 +21,11 @@ const config = {
       colors: {
         white: "#FFFFFF",
         bg_main: "#060B20",
-        blue_main: "#415FF2",
+        color_main: "#EA3300",
         blue_light: "#D3DAFC",
         blue_deep_light: "#B5C0F9",
-        black_main: "#060B20",
+        black_main: "#161921",
+        black_light: "#252933",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

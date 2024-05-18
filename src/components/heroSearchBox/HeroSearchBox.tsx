@@ -73,7 +73,7 @@ const HeroSearchBox = () => {
           />
           <button
             type="submit"
-            className="bg-blue_main text-white px-[35px] py-2 rounded-[5px] flex items-center justify-center max-lg:w-[270px] max-md:w-[340px]"
+            className="bg-color_main text-white px-[35px] py-2 rounded-[5px] flex items-center justify-center max-lg:w-[270px] max-md:w-[340px]"
           >
             Search
           </button>

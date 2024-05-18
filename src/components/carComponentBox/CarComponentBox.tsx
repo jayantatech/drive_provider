@@ -14,7 +14,7 @@ const CarComponentBox = () => {
       </div>
       <div className=" w-full h-[210px] px-2.5 py-1.5">
         <div className="w-full h-[52px] flex flex-col items-start justify-start">
-          <span className="px-4 py-[1px] rounded-[4px] bg-blue_main text-white font-[Poppins] shadow-md text-[14px]">
+          <span className="px-4 py-[1px] rounded-[4px] bg-color_main text-white font-[Poppins] shadow-md text-[14px]">
             Suv
           </span>
           <h3 className=" font-semibold text-[18px] font-[Poppins]">
@@ -77,7 +77,7 @@ const CarComponentBox = () => {
             </div>
           </div>
         </div>
-        <button className="w-full h-[36px] bg-blue_main transition-all duration-200 border-[2px] border-blue_main text-[14px] font-[Poppins] items-center justify-center mt-1 rounded-[6px] text-white font-semibold">
+        <button className="w-full h-[36px] bg-color_main transition-all duration-200 border-[2px] border-color_main text-[14px] font-[Poppins] items-center justify-center mt-1 rounded-[6px] text-white font-semibold">
           Rent Now
         </button>
       </div>

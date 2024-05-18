@@ -9,7 +9,7 @@ const HeroSearchboxTabs = ({ tabVehicles }: { tabVehicles: TabType[] }) => {
         <button
           key={item}
           className={`w-[90px] h-[36px] transition-all duration-100 rounded-[4px] z-20 col-span-1 grow  ${
-            activeTab === item ? "bg-blue_main text-[#fff]" : "bg-white"
+            activeTab === item ? "bg-color_main text-[#fff]" : "bg-white"
           }`}
           onClick={() => setActiveTab(item)}
         >

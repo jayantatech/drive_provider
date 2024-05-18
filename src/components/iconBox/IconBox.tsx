@@ -14,7 +14,7 @@ const IconBox = ({
     <>
       <div className="w-full h-[60px] max-lg:h-[48px] flex items-center justify-between">
         <h2 className=" text-[22px] font-[poppins] font-semibold">
-          Browse by <span className="text-blue_main">{label?.title}</span>
+          Browse by <span className="text-color_main">{label?.title}</span>
         </h2>
         <span className="border-b-[1px] border-black cursor-pointer">
           Show all {label?.subTitle?.toLowerCase()}

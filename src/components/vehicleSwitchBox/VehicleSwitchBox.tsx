@@ -16,10 +16,10 @@ const VehicleSwitchBox = ({
     <div className="w-[358px] h-[40px] flex flex-row gap-2">
       {vehicleModes?.map((item) => (
         <button
-          className={`w-[180px] h-full border-[2px] border-blue_main font-[Poppins] transition-all duration-200 font-semibold rounded-[6px] ${
+          className={`w-[180px] h-full border-[2px] border-color_main font-[Poppins] transition-all duration-200 font-semibold rounded-[6px] ${
             activeVehicle === item
-              ? "bg-blue_main text-white "
-              : "text-blue_main"
+              ? "bg-color_main text-white "
+              : "text-color_main"
           }`}
           onClick={() => activeButtonHandler(item)}
         >

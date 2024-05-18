@@ -44,7 +44,7 @@ black - #060B20
 
         white: "#FFFFFF",
         bg_main: "#060B20",
-        blue_min: "#415FF2",
+        blue_main: "#415FF2", new : color_main
         blue_light: "#D3DAFC",
         blue_deep_light: "#B5C0F9",
         black_main: "#060B20",
