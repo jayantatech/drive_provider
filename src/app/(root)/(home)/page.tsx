@@ -3,6 +3,7 @@ import BrandsAndCarsModels from "@/pages/home/BrandsAndCarsModels";
 import { HeroSection } from "@/pages/home/HeroSection";
 import PopularCarsSection from "@/pages/home/PopularCarsSection";
 import WhyUsSection from "@/pages/home/WhyUsSection";
+import WorkProcess from "@/pages/home/WorkProcess";
 
 export default async function Home() {
   const session = await auth();
@@ -12,6 +13,7 @@ export default async function Home() {
       <BrandsAndCarsModels />
       <PopularCarsSection />
       <WhyUsSection />
+      <WorkProcess />
       <div className="h-[750px]"></div>
     </div>
   );
