@@ -1,4 +1,5 @@
 import { auth } from "@/auth/auth";
+import BikeSlider from "@/pages/home/BikeSlider";
 import BrandsAndCarsModels from "@/pages/home/BrandsAndCarsModels";
 import { HeroSection } from "@/pages/home/HeroSection";
 import PopularCarsSection from "@/pages/home/PopularCarsSection";
@@ -14,6 +15,7 @@ export default async function Home() {
       <PopularCarsSection />
       <WhyUsSection />
       <WorkProcess />
+      <BikeSlider />
       <div className="h-[750px]"></div>
     </div>
   );

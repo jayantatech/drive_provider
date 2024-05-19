@@ -43,8 +43,8 @@ const WorkProcess: React.FC = () => {
           {steps.map((step, index) => (
             <div className=" w-[274px] h-[288px] p-6 bg-white rounded-[6px] shadow-md border-[1px] border-black_main">
               <div className=" flex w-full h-[64px] items-center justify-between">
-                <IoCarSport className="text-[44px] text-color_main" />
-                <span className="text-[32px] font-semibold">{step.number}</span>
+                <IoCarSport className="text-[46px] text-color_main" />
+                <span className="text-[38px] font-semibold">{step.number}</span>
               </div>
               <h3 className=" text-[24px] font-semibold py-1">
                 {" "}
