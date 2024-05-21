@@ -2,7 +2,7 @@ type Props = {
   titleBody: string;
   isTitleBodyWhite?: boolean;
   titleMain: string;
-  titleDescription: string;
+  titleDescription?: string;
 };
 const SectionTitle = ({
   titleBody,
@@ -15,16 +15,22 @@ const SectionTitle = ({
       <div>
         <h2
           className={` main_title ${
-            !isTitleBodyWhite ? "text-black" : "bg-white"
+            !isTitleBodyWhite ? "text-black" : "text-white"
           }`}
         >
           <span className="text-color_main">{titleMain}</span>{" "}
-          {titleBody.toLowerCase()}
+          {titleBody?.toLowerCase()}
         </h2>
       </div>
-      <p className="max-lg:px-10 max-md:px-1 max-lg:text-center lg:max-w-[610px] font-openSans">
-        {titleDescription}
-      </p>
+      <div>
+        <p
+          className={`max-lg:px-10 bg-red-400 max-md:px-1 max-lg:text-center min-lg:max-w-[610px] font-openSans min-w-full ${
+            !isTitleBodyWhite ? "text-black" : "text-white"
+          }`}
+        >
+          {titleDescription}
+        </p>
+      </div>
     </div>
   );
 };

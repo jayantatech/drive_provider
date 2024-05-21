@@ -1,4 +1,5 @@
 import ContentWrapper from "@/components/contentWrapper/ContentWrapper";
+import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import WhyUsBox from "@/components/whyUsBox/WhyUsBox";
 import { CarKey } from "@/contants/img/others/img";
 import Image from "next/image";
@@ -18,20 +19,14 @@ const WhyUsSection = () => {
               alt="home key"
             />
           </div>
-          <div className="w-1/2 max-lg:w-full h-full  flex flex-col gap-3">
-            <div className="flex items-start gap-1 flex-col w-full h-[88px] max-md:h-[78px] pl-4">
-              <div className="flex items-center justify-center gap-2">
-                <span className=" text-color_main">
-                  <FaCar />
-                </span>
-                <h3 className=" font-[Poppins] text-[16px] font-semibold text-color_main">
-                  ABOUT OUR COMPANY
-                </h3>
-              </div>
-              <h2 className=" text-[44px] font-bold -mt-2 text-white max-md:text-[34px]">
-                Why Choose Us?
-              </h2>
-            </div>
+          <div className="w-1/2 max-lg:w-full h-full  flex flex-col gap-3 bg-green-500">
+            {/* <div className="flex items-start gap-1 flex-col w-full h-[88px] max-md:h-[78px] pl-4"></div> */}
+            <SectionTitle
+              titleMain="Why"
+              titleBody="Choose Us"
+              isTitleBodyWhite={true}
+              titleDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum placeat id eius asperiores voluptate necessitatibus."
+            />
 
             <div className=" w-full h-[380px] py-2 flex flex-col gap-3">
               <WhyUsBox
