@@ -17,59 +17,57 @@ const CarComponentBox = () => {
           <span className="px-4 py-[1px] rounded-[4px] bg-color_main text-white font-[Poppins] shadow-md text-[14px]">
             Suv
           </span>
-          <h3 className=" font-semibold text-[18px] font-[Poppins]">
-            Mahindra XUV300
-          </h3>
+          <h3 className=" text-[18px] cardTitle">Mahindra XUV300</h3>
         </div>
         <div className="w-[100%] flex items-center justify-center h-[62px] my-1">
           <div className="w-full rounded-[6px] shadow-md h-[58px] bg-white flex flex-wrap items-center justify-center grid-flow-row gap-1 px-1 py-1">
-            <div className=" h-[20px] flex items-center justify-start gap-1 text-bg_main font-[Poppins] w-[74px]">
+            <div className=" h-[20px] flex items-center justify-start gap-1 text-bg_main cardIconText w-[74px]">
               <FaGasPump className="text-[14px]" />
-              <span className=" font-semibold text-[13px]">Petrol</span>
+              <span className=" text-[13px]">Petrol</span>
             </div>
-            <div className=" h-[20px] w-[114px] flex items-center justify-start gap-1 text-bg_main font-[Poppins]">
+            <div className=" h-[20px] w-[114px] flex items-center justify-start gap-1 text-bg_main cardIconText">
               <GiGearStick className="text-[14px]" />
-              <span className=" font-semibold text-[13px]">automatic </span>
+              <span className="text-[13px]">automatic </span>
             </div>
-            <div className="h-[20px] w-[50px] flex items-center justify-start gap-1 text-bg_main font-[Poppins]">
+            <div className="h-[20px] w-[50px] flex items-center justify-start gap-1 text-bg_main cardIconText">
               <IoIosPeople className="text-[18px]" />
-              <span className=" font-semibold text-[13px]">5</span>
+              <span className="text-[13px]">5</span>
             </div>
-            <div className=" h-[20px] flex items-center justify-start gap-1 text-bg_main font-[Poppins]  w-[74px]">
+            <div className=" h-[20px] flex items-center justify-start gap-1 text-bg_main w-[74px] cardIconText">
               <BsSpeedometer className="text-[14px]" />
-              <span className=" font-semibold text-[13px]">
+              <span className="text-[13px]">
                 15/<span className=" text-[11px]">kmpl</span>
               </span>
             </div>
-            <div className=" h-[20px] w-[114px] flex items-center justify-start gap-1 text-bg_main font-[Poppins]">
+            <div className=" h-[20px] w-[114px] flex items-center justify-start gap-1 text-bg_main cardIconText">
               <GiStopwatch className="text-[14px]" />
-              <span className=" font-semibold text-[13px]">
+              <span className=" text-[13px]">
                 980km/<span className=" text-[11px]">limit</span>
               </span>
             </div>
-            <div className="h-[20px] w-[50px] flex items-center justify-start gap-1 text-bg_main font-[Poppins]">
+            <div className="h-[20px] w-[50px] flex items-center justify-start gap-1 text-bg_main cardIconText">
               <IoIosCard className="text-[14px]" />
-              <span className=" font-semibold text-[13px]">Req</span>
+              <span className="text-[13px]">Req</span>
             </div>
           </div>
         </div>
         <div className=" w-full h-[44px] flex justify-between items-center">
-          <div className=" font-[Poppins]">
+          <div className=" cardIconText font-semibold">
             <span className=" text-[12px] flex items-center">
               {" "}
               <LuIndianRupee />
               2500/Day
             </span>
-            <div className="font-[Poppins] text-[13px] flex gap-1">
-              <span className="font-semibold text-[14px]">3 days</span>{" "}
-              <s className=" text-red-500 flex items-center justify-center">
+            <div className=" text-[13px] flex gap-1 cardIconText">
+              <span className="text-[14px]">3 days</span>{" "}
+              <s className=" text-red-500 flex items-center justify-center font-semibold">
                 {" "}
                 <LuIndianRupee />
                 7500
               </s>
             </div>
           </div>
-          <div className="flex items-center text-[20px] font-semibold">
+          <div className="flex items-center text-[20px] cardIconText">
             <LuIndianRupee />
             <span className="">6500/</span>{" "}
             <div>
@@ -77,7 +75,7 @@ const CarComponentBox = () => {
             </div>
           </div>
         </div>
-        <button className="w-full h-[36px] bg-color_main transition-all duration-200 border-[2px] border-color_main text-[14px] font-[Poppins] items-center justify-center mt-1 rounded-[6px] text-white font-semibold">
+        <button className="w-full h-[36px] bg-color_main transition-all duration-200 border-[2px] border-color_main text-[14px] items-center justify-center mt-1 rounded-[6px] text-white button_main">
           Rent Now
         </button>
       </div>

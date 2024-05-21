@@ -1,4 +1,5 @@
 import { auth } from "@/auth/auth";
+import ReviewsSection from "@/components/reviewsSection/ReviewsSection";
 import BikeSlider from "@/pages/home/BikeSlider";
 import BrandsAndCarsModels from "@/pages/home/BrandsAndCarsModels";
 import { HeroSection } from "@/pages/home/HeroSection";
@@ -16,6 +17,8 @@ export default async function Home() {
       <WhyUsSection />
       <WorkProcess />
       <BikeSlider />
+      <ReviewsSection />
+
       <div className="h-[750px]"></div>
     </div>
   );

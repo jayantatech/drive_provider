@@ -27,7 +27,7 @@ export default function SelectDropdown({
   };
   return (
     <Select onValueChange={(event) => handleSelectionChange(event)}>
-      <div className=" bg-blue_light p-1 rounded-[5px]">
+      <div className=" bg-blue_light p-1 rounded-[5px] font-openSans">
         <SelectTrigger className="w-[220px] max-lg:w-[265px] max-md:w-[330px] h-[32px] rounded-[5px] bg-white border-none">
           <SelectValue placeholder={`${selectionPlaceHolder}`} />
         </SelectTrigger>

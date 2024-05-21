@@ -31,7 +31,7 @@ const DateAndTimePicker = ({
   }, [date, time]);
 
   return (
-    <div className=" min-w-[320px] h-[40px] p-1 max-md:w-[340px] rounded-[5px] bg-blue_light gap-2 flex items-center justify-center">
+    <div className=" min-w-[320px] h-[40px] p-1 max-md:w-[340px] rounded-[5px] bg-blue_light gap-2 flex items-center justify-center font-openSans">
       <DatePicker
         inputPlaceholder={dateInputPlaceholder}
         onChange={handleDate}

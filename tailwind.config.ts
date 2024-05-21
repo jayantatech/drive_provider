@@ -22,6 +22,7 @@ const config = {
         white: "#FFFFFF",
         bg_main: "#060B20",
         color_main: "#EA3300",
+        color_light: "#ff3b04", // Corrected the color code here
         blue_light: "#D3DAFC",
         blue_deep_light: "#B5C0F9",
         black_main: "#161921",
@@ -59,6 +60,10 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        raleway: ["Raleway", "sans-serif"],
+        openSans: ["Open Sans", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
