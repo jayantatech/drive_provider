@@ -12,22 +12,22 @@ const WhyUsBox = ({ number, title, description }: Type) => {
 
   return (
     <div
-      className="flex gap-6 w-full h-[110px] max-md:h-auto max-md:gap-3 items-center justify-center max-lg:justify-start"
+      className="flex gap-6 w-full h-[100px] max-md:h-auto max-md:gap-3 items-center justify-center max-lg:justify-start "
       onMouseEnter={() => setActiveHover(true)}
       onMouseLeave={() => setActiveHover(false)}
     >
       <div
-        className={`w-[82px] h-[82px] rounded-full flex items-center justify-center text-[36px] font-[Poppins] transition-all duration-200 text-color_main font-semibold ${
+        className={`w-[82px] h-[82px] rounded-full flex items-center justify-center  transition-all duration-200 text-color_main why_choose_number ${
           activeHover ? "bg-white" : "bg-black_light"
         }`}
       >
         <span>{number}</span>
       </div>
-      <div className=" w-[78%] max-md:w-[70%] h-full ">
-        <h3 className=" text-[22px] font-semibold font-[Roboto] text-white pb-1">
+      <div className=" w-[78%] max-md:w-[78%] h-full flex items-start justify-center flex-col ">
+        <h3 className="why_choose_title text-white pb-1">
           {title}
         </h3>
-        <p className="font-[Poppins] text-[#CDCDCD]">{description}</p>
+        <p className="sub_description ">{description}</p>
       </div>
     </div>
   );

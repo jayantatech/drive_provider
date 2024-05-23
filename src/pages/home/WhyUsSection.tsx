@@ -3,7 +3,6 @@ import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import WhyUsBox from "@/components/whyUsBox/WhyUsBox";
 import { CarKey } from "@/contants/img/others/img";
 import Image from "next/image";
-import { FaCar } from "react-icons/fa6";
 
 const WhyUsSection = () => {
   return (
@@ -19,14 +18,15 @@ const WhyUsSection = () => {
               alt="home key"
             />
           </div>
-          <div className="w-1/2 max-lg:w-full h-full  flex flex-col gap-3 bg-green-500">
-            {/* <div className="flex items-start gap-1 flex-col w-full h-[88px] max-md:h-[78px] pl-4"></div> */}
-            <SectionTitle
+          <div className="w-1/2 max-lg:w-full h-full  flex flex-col gap-3 ">
+       <div className="w-full h-auto " >
+       <SectionTitle
               titleMain="Why"
               titleBody="Choose Us"
               isTitleBodyWhite={true}
               titleDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum placeat id eius asperiores voluptate necessitatibus."
             />
+       </div>
 
             <div className=" w-full h-[380px] py-2 flex flex-col gap-3">
               <WhyUsBox

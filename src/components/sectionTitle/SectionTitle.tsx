@@ -11,8 +11,8 @@ const SectionTitle = ({
   titleDescription,
 }: Props) => {
   return (
-    <div className="w-full lg:w-[60%] mb-4 lg:mb-0 max-lg:flex max-lg:text-justify max-lg:items-center max-lg:flex-col">
-      <div>
+    <div className="mb-4 lg:mb-0 max-lg:flex max-lg:text-justify max-lg:items-center max-lg:flex-col">
+      <div className="w-full h-auto max-lg:text-center">
         <h2
           className={` main_title ${
             !isTitleBodyWhite ? "text-black" : "text-white"
@@ -22,9 +22,9 @@ const SectionTitle = ({
           {titleBody?.toLowerCase()}
         </h2>
       </div>
-      <div>
+      <div className="max-lg:px-10 max-md:px-1 max-lg:text-center max-md:text-left main_description w-full "> 
         <p
-          className={`max-lg:px-10 bg-red-400 max-md:px-1 max-lg:text-center min-lg:max-w-[610px] font-openSans min-w-full ${
+          className={`${
             !isTitleBodyWhite ? "text-black" : "text-white"
           }`}
         >

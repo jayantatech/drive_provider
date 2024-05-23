@@ -17,7 +17,13 @@
   }
 
   .sub_title {
-    @apply font-raleway capitalize font-[800]
+    @apply font-raleway capitalize font-[800] 
+  }
+  .main_description{
+    @apply font-openSans text-[15px] capitalize 
+  }
+  .sub_description{
+    @apply font-openSans text-[15px] capitalize text-[#CDCDCD]
   }
 
   .cardTitle {
@@ -29,6 +35,12 @@
   }
 
   .button_main {
-    @apply font-raleway font-[800] capitalize
+    @apply font-raleway font-[800] capitalize 
+  }
+  .why_choose_title {
+    @apply text-[20px] font-openSans font-[700]
+  }
+  .why_choose_number {
+    @apply text-[38px] font-openSans font-[700]
   }
 }

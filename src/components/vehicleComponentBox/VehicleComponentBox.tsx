@@ -6,7 +6,7 @@ import { GiGearStick, GiStopwatch } from "react-icons/gi";
 import { IoIosCard, IoIosPeople } from "react-icons/io";
 import { LuIndianRupee } from "react-icons/lu";
 
-const CarComponentBox = () => {
+const VehicleComponentBox = () => {
   return (
     <div className=" w-[288px] bg-[#f5fafe] h-[378px] rounded-[6px] shadow-lg border-[1px] border-blue_light">
       <div className=" bg-black w-full h-[156px] rounded-t-[6px] overflow-hidden">
@@ -14,7 +14,7 @@ const CarComponentBox = () => {
       </div>
       <div className=" w-full h-[210px] px-2.5 py-1.5">
         <div className="w-full h-[52px] flex flex-col items-start justify-start">
-          <span className="px-4 py-[1px] rounded-[4px] bg-color_main text-white font-[Poppins] shadow-md text-[14px]">
+          <span className="px-4 py-[1px] rounded-[4px] bg-color_main text-white shadow-md font-raleway font-semibold text-[14px]">
             Suv
           </span>
           <h3 className=" text-[18px] cardTitle">Mahindra XUV300</h3>
@@ -83,4 +83,6 @@ const CarComponentBox = () => {
   );
 };
 
-export default CarComponentBox;
+export default VehicleComponentBox;
+
+

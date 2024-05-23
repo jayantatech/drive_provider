@@ -1,7 +1,7 @@
 import ContentWrapper from "@/components/contentWrapper/ContentWrapper";
-import CarComponentBox from "@/components/carComponentBox/CarComponentBox";
 import VehicleSwitchBox from "@/components/vehicleSwitchBox/VehicleSwitchBox";
 import SectionTitle from "@/components/sectionTitle/SectionTitle";
+import VehicleSlider from "@/components/vehicleSlider/VehicleSlider";
 
 const PopularCarsSection = () => {
   return (
@@ -18,15 +18,8 @@ const PopularCarsSection = () => {
               <VehicleSwitchBox vehicleModes={["cars", "bikes"]} />
             </div>
           </div>
-          <div className="w-full p-2 flex flex-wrap gap-2 xl:gap-4 items-center justify-between max-lg:justify-evenly">
-            <CarComponentBox />
-            <CarComponentBox />
-            <CarComponentBox />
-            <CarComponentBox />
-            <CarComponentBox />
-            <CarComponentBox />
-            <CarComponentBox />
-            <CarComponentBox />
+          <div className="w-full items-center justify-between max-lg:justify-evenly bg-emerald-700">
+          <VehicleSlider/>
           </div>
         </div>
       </ContentWrapper>
