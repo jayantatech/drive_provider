@@ -18,7 +18,7 @@ const PopularCarsSection = () => {
               <VehicleSwitchBox vehicleModes={["cars", "bikes"]} />
             </div>
           </div>
-          <div className="w-full items-center justify-between max-lg:justify-evenly bg-emerald-700">
+          <div className="w-full items-center justify-between max-lg:justify-evenly">
           <VehicleSlider/>
           </div>
         </div>

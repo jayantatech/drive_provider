@@ -8,39 +8,42 @@
 @import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap);
 
 @layer components {
+  .hero_title {
+    @apply text-[62px] max-lg:text-[40px] max-md:text-[26px] font-raleway font-[900] capitalize text-white;
+  }
   .main_title {
-    @apply text-[44px] max-lg:text-[38px] max-md:text-[28px] font-raleway font-[900] capitalize
+    @apply text-[44px] max-lg:text-[38px] max-md:text-[28px] font-raleway font-[900] capitalize;
   }
 
   .iconCardTitle {
-    @apply font-raleway font-bold capitalize
+    @apply font-raleway font-bold capitalize;
   }
 
   .sub_title {
-    @apply font-raleway capitalize font-[800] 
+    @apply font-raleway capitalize font-[800];
   }
-  .main_description{
-    @apply font-openSans text-[15px] capitalize 
+  .main_description {
+    @apply font-openSans text-[15px] capitalize text-[#ebebeb];
   }
-  .sub_description{
-    @apply font-openSans text-[15px] capitalize text-[#CDCDCD]
+  .sub_description {
+    @apply font-openSans text-[15px] capitalize text-[#CDCDCD];
   }
 
   .cardTitle {
-    @apply font-openSans font-[700]
+    @apply font-openSans font-[700];
   }
 
   .cardIconText {
-    @apply font-openSans font-[700] capitalize
+    @apply font-openSans font-[700] capitalize;
   }
 
   .button_main {
-    @apply font-raleway font-[800] capitalize 
+    @apply font-raleway font-[800] capitalize;
   }
   .why_choose_title {
-    @apply text-[20px] font-openSans font-[700]
+    @apply text-[20px] font-openSans font-[700];
   }
   .why_choose_number {
-    @apply text-[38px] font-openSans font-[700]
+    @apply text-[38px] font-openSans font-[700];
   }
 }

@@ -15,7 +15,7 @@ export const UserProfileButton = ({ userInfo }: { userInfo: object }) => {
   };
   return (
     <div
-      className=" relative w-[55px] h-[55px] max-lg:w-[50px] max-lg:h-[50px] rounded-[5px] border-[3px] border-color_main cursor-pointer overflow-hidden "
+      className=" relative w-[55px] h-[55px] max-lg:w-[50px] max-lg:h-[50px] border-[3px] rounded-full border-color_main cursor-pointer  "
       onClick={() => profileClicked()}
     >
       <span
@@ -25,7 +25,7 @@ export const UserProfileButton = ({ userInfo }: { userInfo: object }) => {
       >
         <FaCircleChevronLeft className="text-[18px] max-lg:text-[16px] " />
       </span>
-      <div className=" w-full h-full scale-105 rounded-[2px] overflow-hidden">
+      <div className=" w-full h-full scale-105 overflow-hidden rounded-full">
         {userInfo?.image ? (
           <Image
             src={userInfo?.image}

@@ -6,13 +6,12 @@ import { MobileNav } from "../mobileNav/MobileNav";
 import HeaderNavOptions from "../headerNavOptions/HeaderNavOptions";
 import { auth } from "@/auth/auth";
 import LoginAndSignUpButton from "../loginAndSignUpButton/LoginAndSignUpButton";
-import { UserProfileButton } from "../userProfileButton/UserProfileButton";
 import { DropdownAccount } from "../dropdownAccount/DropdownAccount";
 
 const Header = async () => {
   const session = await auth();
   return (
-    <header className="min-w-full h-[90px] bg-black py-2 text-white flex items-center justify-center">
+    <header className="min-w-full h-[80px] py-2 text-white flex items-center justify-center flex-col bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 absolute top-0 left-0 z-20 ">
       <ContentWrapper>
         <div className=" w-full h-[60px] grid grid-flow-col grid-cols-6 gap-3 ">
           <div className="grid col-span-1 items-center justify-center max-lg:justify-start max-md:col-span-3 max-lg:col-span-3">

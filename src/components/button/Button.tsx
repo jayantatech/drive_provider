@@ -13,10 +13,10 @@ export function ButtonMain({
 }: Props) {
   return (
     <button
-      className={`px-12 py-2 block border-[3px] border-color_main rounded-[5px]  text-[18px] font-semibold max-lg:w-full max-md:py-1 text-white ${
+      className={` w-[140px] h-[38px] block border-[2px] border-color_main rounded-[5px] text-[16px] button_main max-lg:w-full max-md:py-1 text-white hover:scale-105 transition-all duration-150 ${
         !isOutline
           ? " bg-color_main"
-          : "bg-transparent hover:bg-color_main transition-all duration-150"
+          : "bg-transparent transition-all duration-150"
       } ${!customClass ? "" : customClass}`}
       onClick={() => functionCall()}
     >
