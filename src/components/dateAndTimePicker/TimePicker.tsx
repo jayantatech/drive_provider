@@ -19,7 +19,7 @@ const TimePicker = ({
 
   return (
     <button
-      className="flex min-w-[140px] bg-[#fff] items-center justify-end h-full rounded-[5px] px-2 gap-2"
+      className="flex min-w-[140px] max-md:w-[148px] bg-[#fff] items-center justify-end h-full rounded-[5px] px-2 gap-2"
       onClick={() => setTimePicker(true)}
     >
       {!timePicker ? (
@@ -31,7 +31,7 @@ const TimePicker = ({
         <input
           type="time"
           ref={inputRef}
-          className="w-full h-full bg-transparent placeholder:text-black hover:border-none outline-none"
+          className=" custom-time-input w-full h-full  bg-transparent placeholder:text-black hover:border-none outline-none font-openSans text-[15px]"
           placeholder="Pickup Time"
           max="20:00"
           onChange={handleTimeChange}

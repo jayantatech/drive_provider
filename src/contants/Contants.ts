@@ -20,6 +20,8 @@ import {
   Sedan,
   Suv,
 } from "./img/carTypes/img";
+import { Car } from "./img/cars/img";
+import { CarTwo, Guidepost, People, RoadTrip } from "./img/icons/icons";
 
 type Brandstitle = { title: string; logo: StaticImageData }[];
 type CarType = { title: string; logo: StaticImageData }[];
@@ -101,4 +103,13 @@ const carTypes: CarType = [
   },
 ];
 
-export { carBrands, carTypes };
+const whyToRentTitle = [
+  { title: "Vacation Travel", icon: Car },
+  { title: "Business Trips", icon: CarTwo },
+  { title: "Airport Transfers", icon: Guidepost },
+  { title: "Special Occasions", icon: People },
+  { title: "Group Outings", icon: Car },
+  { title: "Road Trips", icon: RoadTrip },
+];
+
+export { carBrands, carTypes, whyToRentTitle };

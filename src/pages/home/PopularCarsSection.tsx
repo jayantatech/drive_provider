@@ -5,7 +5,7 @@ import VehicleSlider from "@/components/vehicleSlider/VehicleSlider";
 
 const PopularCarsSection = () => {
   return (
-    <div className="my-[98px] h-auto ">
+    <div className="w-full h-auto mt-[110px] mb-[80px] ">
       <ContentWrapper>
         <div className="flex flex-col gap-2">
           <div className="pb-5 w-full py-2 flex flex-col lg:flex-row items-center justify-center h-[120px] max-md:h-[210px] max-lg:h-[160px] bg-yellsdow-400">
@@ -19,7 +19,7 @@ const PopularCarsSection = () => {
             </div>
           </div>
           <div className="w-full items-center justify-between max-lg:justify-evenly">
-          <VehicleSlider/>
+            <VehicleSlider />
           </div>
         </div>
       </ContentWrapper>

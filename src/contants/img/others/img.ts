@@ -1,3 +1,4 @@
 import CarKey from "./carkey.jpg";
+import BackgroundOne from "./background_one.png";
 
-export { CarKey };
+export { CarKey, BackgroundOne };

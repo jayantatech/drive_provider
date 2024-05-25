@@ -22,12 +22,8 @@ const SectionTitle = ({
           {titleBody?.toLowerCase()}
         </h2>
       </div>
-      <div className="max-lg:px-10 max-md:px-1 max-lg:text-center max-md:text-left main_description w-full "> 
-        <p
-          className={`${
-            !isTitleBodyWhite ? "text-black" : "text-white"
-          }`}
-        >
+      <div className="max-lg:px-10 max-md:px-1 max-lg:text-center main_description w-full max-md:text-center">
+        <p className={`${!isTitleBodyWhite ? "text-black" : "text-white"}`}>
           {titleDescription}
         </p>
       </div>

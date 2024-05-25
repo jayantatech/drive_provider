@@ -4,6 +4,7 @@ import BrandsAndCarsModels from "@/pages/home/BrandsAndCarsModels";
 import { HeroSection } from "@/pages/home/HeroSection";
 import HeroSectionTwo from "@/pages/home/HeroSectionTwo";
 import PopularCarsSection from "@/pages/home/PopularCarsSection";
+import WhyToRentSection from "@/pages/home/WhyToRentSection";
 import WhyUsSection from "@/pages/home/WhyUsSection";
 import WorkProcess from "@/pages/home/WorkProcess";
 
@@ -16,9 +17,6 @@ export default async function Home() {
       <BrandsAndCarsModels />
       <PopularCarsSection />
       <WhyUsSection />
-      <WorkProcess />
-      <ReviewsSection />
-
       <div className="h-[750px]"></div>
     </div>
   );

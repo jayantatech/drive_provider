@@ -1,10 +1,11 @@
 import ContentWrapper from "@/components/contentWrapper/ContentWrapper";
+import HeroSearchBox from "@/components/heroSearchBox/HeroSearchBox";
 import { heroCar } from "@/contants/img/cars/img";
 import Image from "next/image";
 
 const HeroSectionTwo = () => {
   return (
-    <div className="w-full h-[860px] max-lg:h-[710px] max-md:h-[610px] bg-red-500 mb-20 relative">
+    <div className="w-full h-[840px] max-lg:h-[710px] max-md:h-[960px] bg-red-500 mb-10 relative">
       <div className="w-full h-full relative">
         <Image src={heroCar} alt="hero image" layout="fill" objectFit="cover" />
       </div>
@@ -36,6 +37,9 @@ const HeroSectionTwo = () => {
             </div>
           </div>
         </ContentWrapper>
+      </div>
+      <div className=" absolute bottom-0 left-0 w-full h-auto flex justify-center items-baseline my-6 max-lg:my-4 z-30">
+        <HeroSearchBox />
       </div>
     </div>
   );
