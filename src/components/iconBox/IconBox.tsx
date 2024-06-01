@@ -12,10 +12,10 @@ const IconBox = ({
   return (
     <>
       <div className="w-full h-[60px] max-lg:h-[48px] flex items-center justify-between">
-        <h2 className=" text-[22px] sub_title">
+        <h2 className=" text-[22px] sub_title text-white">
           Browse by <span className="text-color_main">{label?.title}</span>
         </h2>
-        <span className="border-b-[1px] border-black cursor-pointer ">
+        <span className="border-b-[1px] text-[13px] font-raleway border-slate-200 cursor-pointer text-white">
           Show all {label?.subTitle?.toLowerCase()}
         </span>
       </div>

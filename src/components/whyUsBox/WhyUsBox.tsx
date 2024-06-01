@@ -17,16 +17,14 @@ const WhyUsBox = ({ number, title, description }: Type) => {
       onMouseLeave={() => setActiveHover(false)}
     >
       <div
-        className={`w-[82px] h-[82px] rounded-full flex items-center justify-center  transition-all duration-200 text-color_main why_choose_number ${
+        className={`w-[82px] h-[82px] rounded-[6px] flex items-center justify-center  transition-all duration-200 text-color_main why_choose_number ${
           activeHover ? "bg-white" : "bg-black_light"
         }`}
       >
         <span>{number}</span>
       </div>
       <div className=" w-[78%] max-md:w-[78%] h-full flex items-start justify-center flex-col ">
-        <h3 className="why_choose_title text-white pb-1">
-          {title}
-        </h3>
+        <h3 className="why_choose_title text-white pb-1">{title}</h3>
         <p className="sub_description ">{description}</p>
       </div>
     </div>

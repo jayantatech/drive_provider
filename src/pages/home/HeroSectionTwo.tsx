@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HeroSectionTwo = () => {
   return (
-    <div className="w-full h-[840px] max-lg:h-[710px] max-md:h-[960px] bg-red-500 mb-10 relative">
+    <div className="w-full h-[840px] max-lg:h-[710px] max-md:h-[960px] bg-red-500 relative">
       <div className="w-full h-full relative">
         <Image src={heroCar} alt="hero image" layout="fill" objectFit="cover" />
       </div>

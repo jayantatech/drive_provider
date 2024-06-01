@@ -7,7 +7,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CiLocationOn } from "react-icons/ci";
 
 type Props = {
   selectionItems: string[];

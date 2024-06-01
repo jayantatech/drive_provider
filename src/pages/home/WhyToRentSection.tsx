@@ -11,7 +11,7 @@ const WhyToRentSection = () => {
   return (
     <ContentWrapper>
       <div className="flex items-center justify-center w-full h-[340px] max-lg:h-[480px] max-md:h-[410px] mb-8 flex-col gap-2">
-        <div className="w-[750px] h-[130px] max-md:w-full max-md:h-[140px] max-md:text-center ">
+        <div className="w-[750px] h-[130px] text-center max-md:w-full max-md:h-[140px] max-md:text-center">
           <SectionTitle
             isTitleBodyWhite={true}
             titleMain="Why To"

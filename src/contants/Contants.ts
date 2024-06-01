@@ -22,6 +22,7 @@ import {
 } from "./img/carTypes/img";
 import { Car } from "./img/cars/img";
 import { CarTwo, Guidepost, People, RoadTrip } from "./img/icons/icons";
+import { title } from "process";
 
 type Brandstitle = { title: string; logo: StaticImageData }[];
 type CarType = { title: string; logo: StaticImageData }[];
@@ -112,4 +113,39 @@ const whyToRentTitle = [
   { title: "Road Trips", icon: RoadTrip },
 ];
 
-export { carBrands, carTypes, whyToRentTitle };
+const achievements = [
+  { title: "300+", value: "Rentals Completed" },
+  { title: "400+", value: "Happy Customers" },
+  { title: "9+", value: "Awards Won" },
+  { title: "99%", value: "Satisfaction Rate" },
+];
+
+const footerContants = {
+  aboutDescription:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio praesentium totam at animi commodi quos quo delectus architecto  ",
+  contactInformation: {
+    contactDescription:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    phone: "+01 (977) 2599 12",
+    email: "+01 (977) 2599 12",
+    location: "Kolkata howra west bengale ",
+  },
+  cars: [
+    "Best Suv Cars cars",
+    "Best Sedan cars",
+    "Best Hatchback cars",
+    "Best Crossover cars",
+    "Best Pickup cars",
+    "Best Convertible cars",
+  ],
+  CarsByPrice: [
+    "Best Cars under 1000/day",
+    " Best Cars under 2000/day",
+    " Best Cars under 2500/day",
+    " Best Cars under 3000/day",
+    " Best Cars under 5000/day",
+    "  Best Cars under 10000/day",
+  ],
+};
+
+export { carBrands, carTypes, whyToRentTitle, achievements, footerContants };
