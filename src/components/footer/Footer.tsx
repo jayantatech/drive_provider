@@ -5,16 +5,16 @@ import ContentWrapper from "../contentWrapper/ContentWrapper";
 import { IoMdCall } from "react-icons/io";
 import { MdAddLocation, MdEmail } from "react-icons/md";
 import { footerContants } from "@/contants/Contants";
+import { BackgroundTwo } from "@/contants/img/others/img";
 
 const Footer = () => {
   return (
-    <div className="bg-black py-14">
+    <div className="bg-black py-14 relative overflow-hidden">
       <ContentWrapper>
-        <div className="w-full h-[290px] max-lg:h-[580px] max-md:h-auto flex flex-row max-lg:flex-wrap xl:gap-10">
+        <div className="w-full h-[290px] max-lg:h-[580px] max-md:h-auto flex flex-row max-lg:flex-wrap xl:gap-10 z-10 relative">
           <div className="w-1/4 max-lg:w-2/4 max-md:w-full max-lg:h-[240px] flex flex-col gap-2 max-md:h-[220px]">
             <div className="w-full h-[30px] flex items-center justify-start border-l-[2px] border-color_main mb-3">
               <span className="text-[16px] font-raleway font-semibold text-white pl-2">
-                {" "}
                 About Drive Provider
               </span>
             </div>
@@ -28,14 +28,13 @@ const Footer = () => {
           <div className="w-1/4 h-auto max-lg:h-[240px] max-lg:w-2/4 max-md:w-full  flex flex-col gap-2">
             <div className="w-full h-[30px] flex items-center justify-start border-l-[2px] border-color_main mb-3">
               <span className="text-[16px] font-raleway font-semibold text-white pl-2">
-                {" "}
                 Contact Information
               </span>
             </div>
             <p className="text-[15px] font-openSans text-[#fff]">
               {footerContants?.contactInformation.contactDescription}
             </p>
-            <div className="w-full h-auto  py-1">
+            <div className="w-full h-auto py-1">
               <div className="flex items-center justify-start gap-2 my-1">
                 <IoMdCall className="text-[22px] text-color_main" />
                 <span className="font-openSans text-[15px] text-[#fff]">
@@ -60,13 +59,15 @@ const Footer = () => {
           <div className="w-1/4 h-auto max-lg:h-[240px] max-lg:w-2/4 max-md:w-full flex flex-col gap-2">
             <div className="w-full h-[30px] flex items-center justify-start border-l-[2px] border-color_main mb-3">
               <span className="text-[16px] font-raleway font-semibold text-white pl-2">
-                {" "}
-                Cars{" "}
+                Cars
               </span>
             </div>
             <ul className="text-[15px] font-openSans">
-              {footerContants?.cars?.map((item) => (
-                <li className="pb-1.5 cursor-pointer hover:text-color_main font-semibold  transition-all duration-200 text-[#fff]">
+              {footerContants?.cars?.map((item, index) => (
+                <li
+                  key={index}
+                  className="pb-1.5 cursor-pointer hover:text-color_main font-semibold  transition-all duration-200 text-[#fff]"
+                >
                   {item}{" "}
                 </li>
               ))}
@@ -75,13 +76,15 @@ const Footer = () => {
           <div className="w-1/4 h-auto max-lg:h-[240px] max-lg:w-2/4 max-md:w-full  flex flex-col gap-2">
             <div className="w-full h-[30px] flex items-center justify-start border-l-[2px] border-color_main mb-3">
               <span className="text-[16px] font-raleway font-semibold text-white pl-2">
-                {" "}
-                Cars By Price{" "}
+                Cars By Price
               </span>
             </div>
             <ul className="text-[15px] font-openSans">
-              {footerContants?.CarsByPrice?.map((item) => (
-                <li className="pb-1.5 cursor-pointer hover:text-color_main font-semibold  transition-all duration-200 text-[#fff]">
+              {footerContants?.CarsByPrice?.map((item, index) => (
+                <li
+                  key={index}
+                  className="pb-1.5 cursor-pointer hover:text-color_main font-semibold  transition-all duration-200 text-[#fff]"
+                >
                   {item}{" "}
                 </li>
               ))}
@@ -89,6 +92,13 @@ const Footer = () => {
           </div>
         </div>
       </ContentWrapper>
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={BackgroundTwo}
+          alt="background_image"
+          className="object-cover w-full h-full opacity-[0.27] scale-125 -rotate-180"
+        />
+      </div>
     </div>
   );
 };

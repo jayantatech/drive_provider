@@ -4,6 +4,7 @@ import ReviewsSection from "@/components/reviewsSection/ReviewsSection";
 import BrandsAndCarsModels from "@/pages/home/BrandsAndCarsModels";
 import { HeroSection } from "@/pages/home/HeroSection";
 import HeroSectionTwo from "@/pages/home/HeroSectionTwo";
+import NewsAndPostSection from "@/pages/home/NewsAndPostSection";
 import PopularCarsSection from "@/pages/home/PopularCarsSection";
 import RentersImgesSection from "@/pages/home/RentersImgesSection";
 import SpecialOffSection from "@/pages/home/SpecialOffSection";
@@ -46,6 +47,7 @@ export default async function Home() {
       <WhyUsSection />
       <RentersImgesSection />
       <TestimonialsSection />
+      <NewsAndPostSection />
       <SpecialOffSection />
       <Footer />
       {/* <div className="h-[750px]"></div> */}
