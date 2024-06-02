@@ -1,5 +1,6 @@
 import { auth } from "@/auth/auth";
 import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
 import ReviewsSection from "@/components/reviewsSection/ReviewsSection";
 import BrandsAndCarsModels from "@/pages/home/BrandsAndCarsModels";
 import { HeroSection } from "@/pages/home/HeroSection";
@@ -18,7 +19,7 @@ export default async function Home() {
 
   return (
     <>
-      {/* <HeroSection /> */}
+      <Header className={"absolute top-0 left-0 z-20"} />
       <HeroSectionTwo />
       <BrandsAndCarsModels />
       <PopularCarsSection

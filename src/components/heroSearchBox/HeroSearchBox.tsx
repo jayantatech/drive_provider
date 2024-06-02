@@ -3,8 +3,14 @@ import React, { useState } from "react";
 import SelectDropdown from "../selectDropdown/SelectDropdown";
 import DateAndTimePicker from "../dateAndTimePicker/DateAndTimePicker";
 import HeroSearchboxTabs from "../heroSearchboxTabs/HeroSearchboxTabs";
+import { Type } from "lucide-react";
 
-const HeroSearchBox = () => {
+type Props = {
+  isBoxTabs?: boolean;
+  bgClass?: string;
+};
+
+const HeroSearchBox = ({ isBoxTabs, bgClass }: Props) => {
   const [formData, setFormData] = useState({
     location: "",
     pickupInfo: {},
@@ -50,10 +56,17 @@ const HeroSearchBox = () => {
       className="w-[1046px] max-lg:w-[620px] max-lg:h-[160px] max-md:h-[280px] max-md:w-[100%] flex flex-col items-start justify-start max-md:items-center "
       onSubmit={(event) => handleFormSubmit(event)}
     >
-      <div className=" w-full h-auto flex items-center justify-start max-md:justify-center">
-        <HeroSearchboxTabs tabVehicles={["Cars", "Bikes"]} />
-      </div>
-      <div className="h-[80px] max-lg:h-[110px] max-md:h-[220px] max-md:w-[364px] w-full bg-white rounded-r-[6px] rounded-bl-[6px] p-2 flex items-center justify-center gap-2 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 max-lg:flex-col max-lg:py-3 max-md:rounded-t-[6px]">
+      {isBoxTabs ? (
+        <div className=" w-full h-auto flex items-center justify-start max-md:justify-center">
+          <HeroSearchboxTabs tabVehicles={["Cars", "Bikes"]} />
+        </div>
+      ) : null}
+
+      <div
+        className={` h-[80px] max-lg:h-[110px] max-md:h-[220px] max-md:w-[364px] w-full rounded-r-[6px] rounded-bl-[6px] p-2 flex items-center justify-center gap-2 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 max-lg:flex-col max-lg:py-3 max-md:rounded-t-[6px] ${
+          bgClass ? bgClass : "bg-white"
+        } `}
+      >
         <div className=" w-full h-full flex max-md:flex-col gap-2 items-center justify-center">
           <SelectDropdown
             selectionItems={["Kolkata", "Bengaluru"]}

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const RentersImgesSection = () => {
   return (
-    <div className="py-12">
+    <div className="py-20">
       <ContentWrapper>
         <div className="w-full h-[810px] max-md:h-[980px] max-lg:h-[820px] gap-2 max-lg:gap-1 flex flex-col items-center justify-between">
           <div className="w-[750px] h-[130px] text-center max-md:w-full max-md:h-[140px] max-md:text-center pb-4">

@@ -39,7 +39,7 @@ const HeroSectionTwo = () => {
         </ContentWrapper>
       </div>
       <div className=" absolute bottom-0 left-0 w-full h-auto flex justify-center items-baseline my-6 max-lg:my-4 z-30">
-        <HeroSearchBox />
+        <HeroSearchBox isBoxTabs={true} />
       </div>
     </div>
   );
