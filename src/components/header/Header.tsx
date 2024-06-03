@@ -12,9 +12,9 @@ const Header = async ({ className }: { className?: string }) => {
   const session = await auth();
   return (
     <header
-      className={`min-w-full h-[80px] py-2 text-white flex items-center justify-center flex-col bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 ${
-        className && className
-      }`}
+      className={` ${
+        className ? className : ""
+      } min-w-full h-[80px] py-2 text-white flex items-center justify-center flex-col bg-black bg-clip-padding backdrop-filter backdrop-blur-sm  `}
     >
       <ContentWrapper>
         <div className=" w-full h-[60px] grid grid-flow-col grid-cols-6 gap-3 ">

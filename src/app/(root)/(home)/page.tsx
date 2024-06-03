@@ -19,7 +19,7 @@ export default async function Home() {
 
   return (
     <>
-      <Header className={"absolute top-0 left-0 z-20"} />
+      <Header className={"absolute top-0 left-0 z-20 bg-opacity-30"} />
       <HeroSectionTwo />
       <BrandsAndCarsModels />
       <PopularCarsSection
