@@ -7,6 +7,7 @@ import HeaderNavOptions from "../headerNavOptions/HeaderNavOptions";
 import { auth } from "@/auth/auth";
 import LoginAndSignUpButton from "../loginAndSignUpButton/LoginAndSignUpButton";
 import { DropdownAccount } from "../dropdownAccount/DropdownAccount";
+import Link from "next/link";
 
 const Header = async ({ className }: { className?: string }) => {
   const session = await auth();
@@ -19,7 +20,9 @@ const Header = async ({ className }: { className?: string }) => {
       <ContentWrapper>
         <div className=" w-full h-[60px] grid grid-flow-col grid-cols-6 gap-3 ">
           <div className="grid col-span-1 items-center justify-center max-lg:justify-start max-md:col-span-3 max-lg:col-span-3">
-            <Image alt="Logo" src={logo} width={180} height={70} />
+            <Link href={"/"}>
+              <Image alt="Logo" src={logo} width={180} height={70} />
+            </Link>
           </div>
           <nav className="grid col-span-3 max-lg:col-span-4 max-lg:hidden">
             <HeaderNavOptions />

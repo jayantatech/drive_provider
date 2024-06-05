@@ -50,7 +50,6 @@ export default async function Home() {
       <TestimonialsSection />
       <NewsAndPostSection />
       <SpecialOffSection />
-      <Footer />
       {/* <div className="h-[750px]"></div> */}
     </>
   );
