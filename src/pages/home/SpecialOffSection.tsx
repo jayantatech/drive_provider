@@ -44,7 +44,10 @@ const SpecialOffSection = () => {
           </div>
           <div className="w-2/5 h-full max-lg:w-full  mx-auto flex items-center justify-center flex-row flex-wrap max-lg:flex-row gap-4">
             {achievements?.map((item) => (
-              <div className="w-[170px] h-[140px] bg-[#000] text-white shadow-lg p-2 flex items-center justify-center flex-col rounded-[4px] transition-all duration-200 hover:scale-105">
+              <div
+                className="w-[170px] h-[140px] bg-[#000] text-white shadow-lg p-2 flex items-center justify-center flex-col rounded-[4px] transition-all duration-200 hover:scale-105"
+                key={item.title}
+              >
                 <span className="text-[28px] max-md:text-[32px] font-openSans font-bold text-color_main">
                   {item?.title}
                 </span>

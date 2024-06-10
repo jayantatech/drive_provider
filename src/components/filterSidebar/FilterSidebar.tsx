@@ -1,4 +1,5 @@
 import { carBrands, carTypes } from "@/contants/Contants";
+import { it } from "node:test";
 import { useState } from "react";
 import { IoFilterCircle } from "react-icons/io5";
 import { Range } from "react-range";
@@ -137,7 +138,9 @@ const FilterSidebar = () => {
         >
           <option value="Any">Any</option>
           {carTypes?.map((item) => (
-            <option value={item.title}>{item.title}</option>
+            <option key={item.title} value={item.title}>
+              {item.title}
+            </option>
           ))}
         </select>
       </div>

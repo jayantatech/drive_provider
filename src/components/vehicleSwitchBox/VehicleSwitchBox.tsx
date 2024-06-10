@@ -40,7 +40,9 @@ const VehicleSwitchBox = ({
               {selectItems?.selectLabel}
             </SelectLabel>
             {selectItems?.selectItems.map((item) => (
-              <SelectItem value={item}>{item}</SelectItem>
+              <SelectItem key={item} value={item}>
+                {item}
+              </SelectItem>
             ))}
           </SelectGroup>
         </SelectContent>
@@ -48,6 +50,7 @@ const VehicleSwitchBox = ({
 
       {vehicleModes?.map((item) => (
         <button
+          key={item}
           className={`w-[140px] max-lg:w-[160px] max-md:w-[110px] h-full border-[2px] border-color_main transition-all duration-200 rounded-[6px] text-[14px] button_main ${
             activeVehicle === item
               ? "bg-color_main text-white "

@@ -2,6 +2,7 @@ import { auth } from "@/auth/auth";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import ReviewsSection from "@/components/reviewsSection/ReviewsSection";
+import TestimonialsNewSection from "@/pages/about/TestimonialsNewSection";
 import BrandsAndCarsModels from "@/pages/home/BrandsAndCarsModels";
 import { HeroSection } from "@/pages/home/HeroSection";
 import HeroSectionTwo from "@/pages/home/HeroSectionTwo";
@@ -47,7 +48,8 @@ export default async function Home() {
 
       <WhyUsSection />
       <RentersImgesSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
+      <TestimonialsNewSection />
       <NewsAndPostSection />
       <SpecialOffSection />
       {/* <div className="h-[750px]"></div> */}

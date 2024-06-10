@@ -5,6 +5,7 @@ const nextConfig = {
       { protocol: "https", hostname: "logoipsum.com", port: "" },
       { protocol: "https", hostname: "lh3.googleusercontent.com", port: "" },
       { protocol: "https", hostname: "cdn.pixabay.com", port: "" },
+      { protocol: "https", hostname: "images.pexels.com", port: "" },
     ],
   },
 };

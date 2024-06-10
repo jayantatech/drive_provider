@@ -23,7 +23,7 @@
     @apply font-raleway capitalize font-[800];
   }
   .main_description {
-    @apply font-openSans text-[15px] capitalize text-[#ebebeb];
+    @apply font-openSans text-[16px] capitalize text-[#ebebeb];
   }
   .sub_description {
     @apply font-openSans text-[15px] capitalize text-[#CDCDCD];
