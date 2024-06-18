@@ -21,7 +21,19 @@ import {
   Suv,
 } from "./img/carTypes/img";
 import { Car } from "./img/cars/img";
-import { CarTwo, Guidepost, People, RoadTrip } from "./img/icons/icons";
+import {
+  BookingIcone,
+  CarIcone,
+  CarTwo,
+  DashboardIcone,
+  Guidepost,
+  NotificationIcone,
+  PaymentIcone,
+  People,
+  ProfileIcone,
+  RoadTrip,
+  SupportIcone,
+} from "./img/icons/icons";
 import { title } from "process";
 
 type Brandstitle = { title: string; logo: StaticImageData }[];
@@ -148,4 +160,31 @@ const footerContants = {
   ],
 };
 
-export { carBrands, carTypes, whyToRentTitle, achievements, footerContants };
+// user Dashboard Info
+
+const userDashboardOptions = [
+  // {
+  //   title: "Dashboard",
+  //   linkTo: "/dashboard",
+  //   icone: "LuLayoutDashboard",
+  // },
+
+  { title: "Bookings", linkTo: "/bookings", icone: "LuCalendarDays" },
+  { title: "Profile", linkTo: "/profile", icone: "LuUser" },
+  { title: "Cars", linkTo: "/cars", icone: "LuCar" },
+  { title: "Payments", linkTo: "/payments", icone: "LuCreditCard" },
+  {
+    title: "Notifications",
+    linkTo: "/notifications",
+    icone: "LuMessagesSquare",
+  },
+  { title: "Support", linkTo: "/support", icone: "LuPhoneCall" },
+];
+export {
+  carBrands,
+  carTypes,
+  whyToRentTitle,
+  achievements,
+  footerContants,
+  userDashboardOptions,
+};

@@ -1,16 +1,29 @@
 "use client";
-import { login } from "@/auth/actions";
 import { ButtonMain } from "../button/Button";
+import { useRouter } from "next/navigation";
 
 const LoginAndSignUpButton = () => {
+  const router = useRouter();
+  const signUpHandeler = () => {
+    router.push("/sign-up");
+  };
+
+  const loginHandeler = () => {
+    router.push("/login");
+  };
+
   return (
     <>
       <ButtonMain
         text="Sign Up"
         isOutline={true}
-        functionCall={() => login()}
+        functionCall={() => signUpHandeler()}
       />
-      <ButtonMain text="Login" isOutline={false} functionCall={() => login()} />
+      <ButtonMain
+        text="Login"
+        isOutline={false}
+        functionCall={() => loginHandeler()}
+      />
     </>
   );
 };

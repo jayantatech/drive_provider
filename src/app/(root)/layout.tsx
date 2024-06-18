@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import { MobileNav } from "@/components/mobileNav/MobileNav";
 import Footer from "@/components/footer/Footer";
+import AuthProvider from "@/context/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,11 +30,12 @@ export default function RootLayout({
           rel="stylesheet"
         />{" "}
       </head>
-
-      <body className={inter.className}>
-        {children}
-        <Footer />
-      </body>
+      <AuthProvider>
+        <body className={inter.className}>
+          {children}
+          <Footer />
+        </body>
+      </AuthProvider>
     </html>
   );
 }
