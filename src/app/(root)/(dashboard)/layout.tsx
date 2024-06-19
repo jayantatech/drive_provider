@@ -8,7 +8,7 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
       <ContentWrapper>
         <div className="flex my-8">
           <NavBar />
-          <section className="flex min-h-screen flex-1 flex-col pt-8 px-4 pb-4 bg-sky-700">
+          <section className="flex min-h-screen flex-1 flex-col pt-2 px-4 pb-4">
             {children}
           </section>
         </div>
