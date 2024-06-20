@@ -171,7 +171,7 @@ const userDashboardOptions = [
 
   { title: "Bookings", linkTo: "/bookings", icone: "LuCalendarDays" },
   { title: "Profile", linkTo: "/profile", icone: "LuUser" },
-  { title: "Cars", linkTo: "/cars", icone: "LuCar" },
+  { title: "Cars", linkTo: "/booking-cars", icone: "LuCar" },
   { title: "Payments", linkTo: "/payments", icone: "LuCreditCard" },
   {
     title: "Notifications",

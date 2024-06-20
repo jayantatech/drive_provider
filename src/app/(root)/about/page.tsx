@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import PageTitleSection from "@/components/pageTitleSection/PageTitleSection";
 import { Car_Three } from "@/contants/img/cars/img";
@@ -8,7 +9,6 @@ import OurTeam from "@/pages/about/OurTeam";
 import TestimonialsNewSection from "@/pages/about/TestimonialsNewSection";
 import SpecialOffSection from "@/pages/home/SpecialOffSection";
 import React from "react";
-
 const About = () => {
   return (
     <div>
@@ -24,6 +24,7 @@ const About = () => {
       <OurTeam />
       <TestimonialsNewSection />
       <SpecialOffSection />
+      <Footer />
     </div>
   );
 };

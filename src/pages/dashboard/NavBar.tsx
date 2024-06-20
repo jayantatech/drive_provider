@@ -43,7 +43,7 @@ const iconComponents: Record<string, IconType> = {
 const NavBar = () => {
   const pathName = usePathname();
   return (
-    <div className="bg-black text-white h-[848px] w-[260px] rounded-[6px] p-4 flex items-center justify-between flex-col">
+    <div className="bg-black text-white h-[868px] w-[260px] rounded-[6px] p-4 flex items-center justify-between flex-col  fixed">
       <div className="w-full  h-auto">
         <div className="flex items-center justify-center w-full h-[48px]">
           <Image src={logo} alt="logo" width={160} height={40} />

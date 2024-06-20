@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import PageTitleSection from "@/components/pageTitleSection/PageTitleSection";
 import { carDriving } from "@/contants/img/others/img";
@@ -19,6 +20,7 @@ const page = () => {
       <GetInTouchSection />
       <ContactInfoSection />
       <SpecialOffSection />
+      <Footer />
     </div>
   );
 };

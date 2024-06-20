@@ -52,6 +52,8 @@ export default async function Home() {
       <TestimonialsNewSection />
       <NewsAndPostSection />
       <SpecialOffSection />
+      <Footer />
+
       {/* <div className="h-[750px]"></div> */}
     </>
   );
