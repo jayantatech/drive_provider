@@ -87,7 +87,7 @@ const TimeSelectBar = () => {
             />
           </div>
         </div>
-        <button className="w-full py-1.5 bg-color_main text-white text-[16px] hover:bg-color_main transition duration-300 font-bold font-raleway rounded-[8px]">
+        <button className="w-full py-1.5 bg-color_main text-white text-[16px] hover:bg-color_main transition duration-300 font-bold font-raleway rounded-[8px] hover:scale-[.98]">
           Search
         </button>
       </div>

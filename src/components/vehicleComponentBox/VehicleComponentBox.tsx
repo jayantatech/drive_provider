@@ -75,7 +75,7 @@ const VehicleComponentBox = () => {
             </div>
           </div>
         </div>
-        <button className="w-full h-[36px] bg-color_main transition-all duration-200 border-[2px] border-color_main text-[14px] items-center justify-center mt-1 rounded-[6px] text-white button_main">
+        <button className="w-full h-[36px] bg-color_main transition-all duration-15p border-[2px] border-color_main text-[14px] items-center justify-center mt-1 rounded-[6px] text-white button_main hover:scale-[.97]">
           Rent Now
         </button>
       </div>
@@ -84,5 +84,3 @@ const VehicleComponentBox = () => {
 };
 
 export default VehicleComponentBox;
-
-

@@ -1,5 +1,4 @@
 import { carBrands, carTypes } from "@/contants/Contants";
-import { it } from "node:test";
 import { useState } from "react";
 import { IoFilterCircle } from "react-icons/io5";
 import { Range } from "react-range";
@@ -144,6 +143,9 @@ const FilterSidebar = () => {
           ))}
         </select>
       </div>
+      <button className="w-full py-1.5 bg-color_main text-white text-[16px] hover:bg-color_main transition duration-300 font-bold font-raleway rounded-[8px] hover:scale-[.98]">
+        Search
+      </button>
     </div>
   );
 };
