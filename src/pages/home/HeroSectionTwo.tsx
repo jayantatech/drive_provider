@@ -28,7 +28,7 @@ const HeroSectionTwo = () => {
               </p>
               <div className="w-full h-auto p-2 gap-4 flex items-center justify-center mt-6">
                 <button className="h-[40px] w-[154px] bg-color_main hover:scale-105 transition-all duration-200 text-white button_main text-[17px] rounded-[6px]">
-                  Find Vehicle
+                  Bookings
                 </button>
                 <button className="h-[40px] w-[154px] border border-color_main text-white button_main text-[17px] rounded-[6px] hover:scale-105 transition-all ease-in duration-200">
                   Find Vehicle

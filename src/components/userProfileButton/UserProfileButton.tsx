@@ -1,9 +1,13 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import { FaCircleChevronLeft } from "react-icons/fa6";
 
-export const UserProfileButton = ({ userInfo }: { userInfo: object }) => {
+export const UserProfileButton = ({
+  userImage,
+}: {
+  userImage: string | StaticImageData;
+}) => {
   const [activeProfile, setActiveProfile] = useState(false);
 
   useEffect(() => {
@@ -15,7 +19,7 @@ export const UserProfileButton = ({ userInfo }: { userInfo: object }) => {
   };
   return (
     <div
-      className=" relative w-[55px] h-[55px] max-lg:w-[50px] max-lg:h-[50px] border-[3px] rounded-full border-color_main cursor-pointer  "
+      className=" relative w-[46px] h-[46px] max-lg:w-[50px] max-lg:h-[50px] border-[3px] rounded-full cursor-pointer"
       onClick={() => profileClicked()}
     >
       <span
@@ -23,16 +27,11 @@ export const UserProfileButton = ({ userInfo }: { userInfo: object }) => {
           activeProfile ? "rotate-90" : "-rotate-90"
         }`}
       >
-        <FaCircleChevronLeft className="text-[18px] max-lg:text-[16px] " />
+        <FaCircleChevronLeft className="text-[18px] max-lg:text-[16px] text-white" />
       </span>
       <div className=" w-full h-full scale-105 overflow-hidden rounded-full">
-        {userInfo?.image ? (
-          <Image
-            src={userInfo?.image}
-            alt="image data"
-            width={60}
-            height={60}
-          />
+        {userImage ? (
+          <Image src={userImage} alt="image data" width={50} height={50} />
         ) : null}
       </div>
     </div>

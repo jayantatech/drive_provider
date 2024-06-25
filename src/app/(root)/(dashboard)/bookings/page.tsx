@@ -1,9 +1,14 @@
 "use client";
 import ActiveBooking from "@/pages/dashboard/Booking/ActiveBooking";
 import PastBookings from "@/pages/dashboard/Booking/PastBookings";
+import { useRouter } from "next/navigation";
 import { MdAddBox } from "react-icons/md";
 
 const BookingPage = () => {
+  const navigation = useRouter();
+  function routCarsPage() {
+    navigation.push("/booking-cars");
+  }
   return (
     <>
       <div className="w-full h-[40px] mb-2 flex items-center justify-between">
@@ -11,7 +16,10 @@ const BookingPage = () => {
           Bookings
         </h3>{" "}
         <div className="w-auto h-full flex items-center justify-end ">
-          <button className="py-1 px-2 bg-color_main font-raleway text-[14px] font-bold rounded-[6px] flex items-center justify-center gap-1 text-white">
+          <button
+            className="py-1 px-2 bg-color_main font-raleway text-[14px] font-bold rounded-[6px] flex items-center justify-center gap-1 text-white"
+            onClick={routCarsPage}
+          >
             <MdAddBox className="text-[18px]" />
             Book New Car
           </button>

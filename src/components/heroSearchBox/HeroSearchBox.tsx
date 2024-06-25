@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import SelectDropdown from "../selectDropdown/SelectDropdown";
 import DateAndTimePicker from "../dateAndTimePicker/DateAndTimePicker";
 import HeroSearchboxTabs from "../heroSearchboxTabs/HeroSearchboxTabs";
-import { Type } from "lucide-react";
 
 type Props = {
   isBoxTabs?: boolean;
   bgClass?: string;
+};
+type PickupDropOffInfo = {
+  date?: string;
+  time?: string;
 };
 
 const HeroSearchBox = ({ isBoxTabs, bgClass }: Props) => {
@@ -24,7 +27,8 @@ const HeroSearchBox = ({ isBoxTabs, bgClass }: Props) => {
       location: value,
     });
   };
-  const handlePickupInfo = (value: object) => {
+  const handlePickupInfo = (value: PickupDropOffInfo) => {
+    console.log("This is the valu", value);
     if (value?.date && value?.time) {
       setFormData({
         ...formData,
@@ -35,13 +39,13 @@ const HeroSearchBox = ({ isBoxTabs, bgClass }: Props) => {
       });
     }
   };
-  const handleDropOffInfo = (value: object) => {
+  const handleDropOffInfo = (value: PickupDropOffInfo) => {
     if (!value.date && !value.time) return null;
     setFormData({
       ...formData,
       dropOffInfo: {
         dropOffDate: value?.date,
-        dropOffTime: value.time,
+        dropOffTime: value?.time,
       },
     });
   };
@@ -58,7 +62,7 @@ const HeroSearchBox = ({ isBoxTabs, bgClass }: Props) => {
     >
       {isBoxTabs ? (
         <div className=" w-full h-auto flex items-center justify-start max-md:justify-center">
-          <HeroSearchboxTabs tabVehicles={["Cars", "Bikes"]} />
+          <HeroSearchboxTabs tabVehicles={["Cars"]} />
         </div>
       ) : null}
 

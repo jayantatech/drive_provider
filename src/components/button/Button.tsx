@@ -1,7 +1,7 @@
 type Props = {
   text: string;
   isOutline: boolean;
-  functionCall: () => void;
+  functionCall?: () => void;
   customClass?: string;
 };
 
@@ -18,7 +18,7 @@ export function ButtonMain({
           ? " bg-color_main"
           : "bg-transparent transition-all duration-150"
       } ${!customClass ? "" : customClass}`}
-      onClick={() => functionCall()}
+      onClick={functionCall}
     >
       {text}
     </button>

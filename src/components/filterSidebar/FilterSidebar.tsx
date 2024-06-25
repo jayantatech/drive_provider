@@ -12,7 +12,7 @@ const FilterSidebar = () => {
   const [model, setModel] = useState("Any");
 
   return (
-    <div className="w-full bg-white shadow-lg p-6 rounded-[10px] border-2 border-color_main">
+    <div className="w-full bg-white shadow-lg p-6 rounded-[10px] border">
       <div className="w-full h-[36px] flex items-center justify-between border-b-2 border-[#e5eaee] mb-2">
         <span className="text-[16px] font-openSans font-semibold">Filters</span>
         <div className="flex items-center justify-center gap-1 cursor-pointer text-color_main">
