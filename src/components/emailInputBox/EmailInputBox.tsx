@@ -16,7 +16,7 @@ export default function EmailInputBox() {
       return;
     }
 
-    console.log(email);
+    // // console.log(email);
     setError("");
     setSuccess("Thank you for your email!");
     setEmail(""); // Clear the input field after successful submission

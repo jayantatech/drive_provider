@@ -9,7 +9,7 @@ export const signUp = async (
   next: NextFunction
 ): Promise<object> => {
   await dbConnect();
-  console.log(req.body);
+  // console.log(req.body);
   try {
     const signUpInfo = await req.body;
 

@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-type TabType = string;
-const HeroSearchboxTabs = ({ tabVehicles }: { tabVehicles: TabType[] }) => {
-  const [activeTab, setActiveTab] = useState<TabType>(tabVehicles[0]);
+type TabType = string[];
+const HeroSearchboxTabs = ({ tabVehicles }: { tabVehicles: TabType }) => {
+  const [activeTab, setActiveTab] = useState<string>(tabVehicles[0]);
   return (
     <div className=" w-auto bg-white min-h-[48px] flex flex-row gap-2 items-center justify-center p-1 rounded-t-[6px] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 font-bold max-md:w-[320px] ">
       {tabVehicles?.map((item, index) => (

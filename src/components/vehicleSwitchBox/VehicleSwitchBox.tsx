@@ -9,29 +9,31 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { offeringVehicleTypes } from "@/contants/MainDependency";
 
-type allVehicles = "cars" | "bikes";
+type AllVehicles = typeof offeringVehicleTypes;
+
 const VehicleSwitchBox = ({
   vehicleModes,
   selectItems,
 }: {
-  vehicleModes: allVehicles[];
+  vehicleModes: AllVehicles;
   selectItems: {
     placeHolder: string;
     selectLabel: string;
     selectItems: string[];
   };
 }) => {
-  const [activeVehicle, setActiveVehicle] = useState<allVehicles>("cars");
+  const [activeVehicle, setActiveVehicle] = useState<string>("Cars");
 
-  function activeButtonHandler(item: allVehicles) {
+  function activeButtonHandler(item: string) {
     setActiveVehicle(item);
   }
 
   return (
-    <div className="w-[480px] h-[40px] max-lg:h-[34px] flex flex-row gap-2 max-md:items-center max-md:justify-center">
+    <div className="w-[588px] h-[40px] max-lg:h-[34px] flex flex-row gap-2 max-md:items-center max-md:justify-center justify-end items-center">
       <Select>
-        <SelectTrigger className="w-[180px] max-lg:h-[34px] max-md:w-[150px] max-w-[220px] rounded-[6px] border-[2px] border-color_main text-color_main font-raleway font-semibold">
+        <SelectTrigger className="w-[168px] max-lg:h-[34px] max-md:w-[150px] max-w-[220px] rounded-[6px] border-[2px] border-color_main text-color_main font-raleway font-semibold">
           <SelectValue placeholder={selectItems?.placeHolder} />
         </SelectTrigger>
         <SelectContent className="bg-white font-raleway font-semibold">
@@ -58,7 +60,6 @@ const VehicleSwitchBox = ({
           }`}
           onClick={() => activeButtonHandler(item)}
         >
-          {" "}
           {item}
         </button>
       ))}

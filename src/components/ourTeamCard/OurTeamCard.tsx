@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { avatar_Team } from "@/contants/img/others/img";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
@@ -7,22 +8,22 @@ const OurTeamCard = ({
   name,
   jobRole,
   socialLinks,
+  profileImage,
 }: {
   name: string;
   jobRole: string;
+  profileImage?: string | StaticImageData;
   socialLinks?: { faceBook?: string; linkedin?: string; twitter?: string };
 }) => {
   return (
     <div className="w-[280px] h-[380px] border-2 border-[#e5eaee] rounded-[6px] overflow-hidden shadow-lg bg-cyasdn-300 ">
       <div className="w-full h-[68%] rounded-[6px] relative overflow-hidden">
         <Image
-          src={
-            "https://cdn.pixabay.com/photo/2022/06/21/08/57/male-7275449_1280.jpg"
-          }
+          src={profileImage || avatar_Team}
           layout="fill"
           objectFit="cover"
           alt="team member image"
-          className="p-3 rounded-[10px] "
+          className="p-3 rounded-[10px]"
         />
       </div>
       <div className="w-full h-[32%] bg-black py-2">

@@ -1,5 +1,6 @@
 import ContentWrapper from "@/components/contentWrapper/ContentWrapper";
 import SectionTitle from "@/components/sectionTitle/SectionTitle";
+import { aboutTitles } from "@/contants/Contants";
 import { FiSend } from "react-icons/fi";
 import { MdDashboardCustomize } from "react-icons/md";
 import { MdElectricCar } from "react-icons/md";
@@ -14,13 +15,12 @@ const OurKeyPoints = () => {
             <div className="w-full h-[202px] max-md:h-auto ">
               <SectionTitle
                 isTitleBodyWhite={true}
-                titleMain="Dedicated"
+                titleMain={aboutTitles.first_Main_Section.mainTitleWord}
                 customClass={{
                   titleMain: "text-[33px]",
                 }}
-                titleBody="
- to Excellence and Client Satisfaction"
-                titleDescription="At CarProvider.com, excellence drives us. Whether in Kolkata or Bengaluru, we strive to provide superior car rental services, ensuring our clients are not just satisfied but thrilled with their experience"
+                titleBody={aboutTitles.first_Main_Section.mainTitleBody}
+                titleDescription={aboutTitles.first_Main_Section.description}
               />
             </div>
             <div className="w-full h-[308px] pt-3">
@@ -29,8 +29,7 @@ const OurKeyPoints = () => {
                   <FiSend className="text-[24px] text-color_main" />
                 </span>
                 <p className="font-openSans text-[16px] font-medium h-auto w-[90%]">
-                  Our solutions are designed to streamline your operations,
-                  leading to higher productivity and lower costs.
+                  {aboutTitles.first_Main_Section.keyPoints.pointOne}
                 </p>
               </div>
               <div className="w-full h-auto py-3 flex items-center justify-start gap-2  border-dashed border-b border-[#e5eaee] text-white">
@@ -38,9 +37,7 @@ const OurKeyPoints = () => {
                   <MdDashboardCustomize className="text-[24px] text-color_main" />
                 </span>
                 <p className="font-openSans text-[16px] font-medium h-auto w-[90%]">
-                  We understand your unique needs and provide customized rental
-                  options, ensuring you get the perfect vehicle for your
-                  requirements.
+                  {aboutTitles.first_Main_Section.keyPoints.pointTwo}
                 </p>
               </div>
               <div className="w-full h-auto py-3 flex items-center justify-start gap-2  border-dashed border-b border-[#e5eaee] text-white">
@@ -48,8 +45,7 @@ const OurKeyPoints = () => {
                   <MdElectricCar className="text-[24px] text-color_main " />
                 </span>
                 <p className="font-openSans text-[16px] font-medium h-auto w-[90%]">
-                  Choose from our diverse range of well-maintained, high-quality
-                  vehicles, ensuring comfort and reliability for every trip.
+                  {aboutTitles.first_Main_Section.keyPoints.pointThree}
                 </p>
               </div>
             </div>
@@ -62,12 +58,13 @@ const OurKeyPoints = () => {
                 </div>
                 <div>
                   <h4 className="text-[22px] font-raleway font-bold text-white">
-                    Our Mission
+                    {aboutTitles.first_Main_Section.mainStements.mission.title}{" "}
                   </h4>
                   <p className="text-[16px] font-openSans text-[#ffffffc2]">
-                    A clear statement of your agency's mission and core values,
-                    highlighting what drives your work and commitment to
-                    clients.
+                    {
+                      aboutTitles.first_Main_Section.mainStements.mission
+                        .description
+                    }{" "}
                   </p>
                 </div>
               </div>
@@ -77,12 +74,13 @@ const OurKeyPoints = () => {
                 </div>
                 <div>
                   <h4 className="text-[22px] font-raleway font-bold text-white">
-                    Our Mission
+                    {aboutTitles.first_Main_Section.mainStements.vision.title}{" "}
                   </h4>
                   <p className="text-[16px] font-openSans text-[#ffffffc2]">
-                    A clear statement of your agency's mission and core values,
-                    highlighting what drives your work and commitment to
-                    clients.
+                    {
+                      aboutTitles.first_Main_Section.mainStements.vision
+                        .description
+                    }{" "}
                   </p>
                 </div>
               </div>
@@ -92,12 +90,16 @@ const OurKeyPoints = () => {
                 </div>
                 <div>
                   <h4 className="text-[22px] font-raleway font-bold text-white">
-                    Our Mission
+                    {
+                      aboutTitles.first_Main_Section.mainStements.Key_Point
+                        .title
+                    }{" "}
                   </h4>
                   <p className="text-[16px] font-openSans text-[#ffffffc2]">
-                    A clear statement of your agency's mission and core values,
-                    highlighting what drives your work and commitment to
-                    clients.
+                    {
+                      aboutTitles.first_Main_Section.mainStements.Key_Point
+                        .description
+                    }{" "}
                   </p>
                 </div>
               </div>

@@ -1,9 +1,14 @@
 import ContentWrapper from "@/components/contentWrapper/ContentWrapper";
 import SectionTitle from "@/components/sectionTitle/SectionTitle";
 import WhyUsBox from "@/components/whyUsBox/WhyUsBox";
-import { BackgroundOne, CarKey } from "@/contants/img/others/img";
+import {
+  BackgroundOne,
+  CarKey,
+  Car_for_Why_Us,
+} from "@/contants/img/others/img";
 import Image from "next/image";
 import WhyToRentSection from "./WhyToRentSection";
+import { homeTitles } from "@/contants/Contants";
 
 const WhyUsSection = () => {
   return (
@@ -25,38 +30,30 @@ const WhyUsSection = () => {
             <div className="w-full h-[488px] max-lg:h-auto flex gap-[20px] max-lg:gap-20 max-lg:flex-col">
               <div className="w-1/2 max-lg:w-full h-full flex items-center justify-center">
                 <Image
-                  src={CarKey}
+                  src={Car_for_Why_Us}
                   width={620}
                   height={280}
-                  className=""
+                  className="rounded-[6px]"
                   alt="home key"
                 />
               </div>
               <div className="w-1/2 max-lg:w-full h-full flex flex-col gap-3">
                 <div className="w-full h-auto">
                   <SectionTitle
-                    titleMain="Why"
-                    titleBody="Choose Us"
+                    titleMain={homeTitles.third_Sub_Section.mainTitleWord}
+                    titleBody={homeTitles.third_Sub_Section.mainTitleBody}
                     isTitleBodyWhite={true}
-                    titleDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum placeat id eius asperiores voluptate necessitatibus."
+                    titleDescription={homeTitles.third_Sub_Section.description}
                   />
                 </div>
                 <div className="w-full h-[380px] py-2 flex flex-col gap-3">
-                  <WhyUsBox
-                    number={"01"}
-                    title="24/7 Work Process"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quo laudantium aliquam"
-                  />
-                  <WhyUsBox
-                    number={"02"}
-                    title="24/7 Work Process"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quo laudantium aliquam nesciunt"
-                  />
-                  <WhyUsBox
-                    number={"03"}
-                    title="24/7 Work Process"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quo laudantium aliquam nesciunt"
-                  />
+                  {homeTitles.third_Sub_Section.keyPoints.map((item) => (
+                    <WhyUsBox
+                      number={item.number}
+                      title={item.title}
+                      description={item.description}
+                    />
+                  ))}
                 </div>
               </div>
             </div>

@@ -12,14 +12,14 @@ const BrandsAndCarsModels = () => {
           <div className="w-2/4 max-lg:w-full h-[290px] max-md:h-[460px] py-4 max-lg:py-1 max-lg:h-[240px]">
             <IconBox
               boxArray={maxCarsToShow}
-              label={{ title: "Make", subTitle: "makers" }}
+              label={{ title: "Brand", subTitle: "brands" }}
               isShadow={true}
             />
           </div>
           <div className="w-2/4 max-lg:w-full h-[290px] max-md:h-[460px] py-4 max-lg:py-1 max-lg:h-[240px]">
             <IconBox
               boxArray={maxTypesToShow}
-              label={{ title: "Make", subTitle: "makers" }}
+              label={{ title: "Type", subTitle: "types" }}
               isShadow={false}
             />
           </div>

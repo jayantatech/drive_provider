@@ -28,7 +28,7 @@ export default function DatePicker({
 
   const handleDateSelect = (selectedDateRange: DateRange | undefined) => {
     if (selectedDateRange) {
-      console.log(selectedDateRange);
+      // // console.log(selectedDateRange);
       setDate(selectedDateRange);
       onChange(selectedDateRange);
     }

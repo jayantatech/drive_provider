@@ -6,6 +6,7 @@ import { MdConnectingAirports } from "react-icons/md";
 import { TbRoad } from "react-icons/tb";
 import { BiSolidGroup } from "react-icons/bi";
 import { BiTrip } from "react-icons/bi";
+import { homeTitles } from "@/contants/Contants";
 
 const WhyToRentSection = () => {
   return (
@@ -14,9 +15,9 @@ const WhyToRentSection = () => {
         <div className="w-[750px] h-[130px] text-center max-md:w-full max-md:h-[140px] max-md:text-center">
           <SectionTitle
             isTitleBodyWhite={true}
-            titleMain="Why To"
-            titleDescription="Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat."
-            titleBody="rent a Vechile"
+            titleMain={homeTitles.third_Section.mainTitleWord}
+            titleDescription={homeTitles.third_Section.description}
+            titleBody={homeTitles.third_Section.mainTitleBody}
           />
         </div>
         <div
@@ -30,7 +31,7 @@ const WhyToRentSection = () => {
                 Vacation Travel{" "}
               </span>
               <span className="text-[12px] font-raleway font-semibold">
-                17 Cars Available
+                19 Cars Available
               </span>
             </div>
             <div className="w-[170px] h-[140px] max-md:h-[120px] bg-[#313235] text-white shadow-lg p-2 flex items-center justify-center flex-col rounded-[4px] transition-all duration-200 hover:scale-105">
@@ -39,7 +40,7 @@ const WhyToRentSection = () => {
                 Business Trips{" "}
               </span>
               <span className="text-[12px] font-raleway font-semibold">
-                17 Cars Available
+                22 Cars Available
               </span>
             </div>
             <div className="w-[170px] h-[140px] max-md:h-[120px] bg-[#313235] text-white shadow-lg p-2 flex items-center justify-center flex-col rounded-[4px] transition-all duration-200 hover:scale-105">
@@ -48,7 +49,7 @@ const WhyToRentSection = () => {
                 Airport Transfers{" "}
               </span>
               <span className="text-[12px] font-raleway font-semibold">
-                17 Cars Available
+                14 Cars Available
               </span>
             </div>
           </div>
@@ -59,7 +60,7 @@ const WhyToRentSection = () => {
                 Group Outings{" "}
               </span>
               <span className="text-[12px] font-raleway font-semibold">
-                17 Cars Available
+                11 Cars Available
               </span>
             </div>
             <div className="w-[170px] h-[140px] max-md:h-[120px] bg-[#313235] text-white shadow-lg p-2 flex items-center justify-center flex-col rounded-[4px] transition-all duration-200 hover:scale-105">
@@ -68,7 +69,7 @@ const WhyToRentSection = () => {
                 Group Outings{" "}
               </span>
               <span className="text-[12px] font-raleway font-semibold">
-                17 Cars Available
+                10 Cars Available
               </span>
             </div>
             <div className="w-[170px] h-[140px] max-md:h-[120px] bg-[#313235] text-white shadow-lg p-2 flex items-center justify-center flex-col rounded-[4px] transition-all duration-200 hover:scale-105">

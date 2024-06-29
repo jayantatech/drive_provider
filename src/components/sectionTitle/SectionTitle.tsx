@@ -18,11 +18,6 @@ const SectionTitle = ({
   customClass,
 }: Props) => {
   return (
-    // <div
-    //   className={`mb-4 lg:mb-0 max-lg:flex max-lg:text-justify max-lg:items-center max-lg:flex-col ${
-    //     customClass?.containerDiv ? customClass?.containerDiv : ""
-    //   }`}
-    // >
     <div
       className={`mb-4 lg:mb-0 max-lg:flex max-lg:text-start max-lg:items-start max-lg:flex-col ${
         customClass?.containerDiv ? customClass?.containerDiv : ""
@@ -42,7 +37,7 @@ const SectionTitle = ({
           </span>
         </h2>
       </div>
-      <div className={`  `}>
+      <div>
         <p
           className={`max-md:px-1 max-lg:text-center main_description w-full max-md:text-center ${
             !isTitleBodyWhite ? "text-black" : "text-white"

@@ -19,14 +19,14 @@ const Header = ({ className }: { className?: string }) => {
     const fetchSessionData = async () => {
       const sessionData = await getSessionData();
       setSession(sessionData);
-      console.log("This is the session", sessionData);
+      // // console.log("This is the session", sessionData);
     };
 
     fetchSessionData();
   }, []);
 
   if (sessionData) {
-    console.log("User session data is jjj", sessionData.user);
+    // // console.log("User session data is jjj", sessionData.user);
   }
 
   return (

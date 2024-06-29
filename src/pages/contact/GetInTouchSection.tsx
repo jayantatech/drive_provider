@@ -54,7 +54,7 @@ const GetInTouchSection = () => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      console.log(formData);
+      // console.log(formData);
       setSuccessMessage("Submit successful! We will contact you shortly.");
       setFormData({
         firstName: "",

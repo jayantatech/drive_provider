@@ -11,7 +11,7 @@ export const UserProfileButton = ({
   const [activeProfile, setActiveProfile] = useState(false);
 
   useEffect(() => {
-    console.log("activeProfile value:", activeProfile);
+    // console.log("activeProfile value:", activeProfile);
   }, [activeProfile]);
 
   const profileClicked = () => {

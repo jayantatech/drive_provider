@@ -1,10 +1,9 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header/Header";
-import { MobileNav } from "@/components/mobileNav/MobileNav";
-import Footer from "@/components/footer/Footer";
 import AuthProvider from "@/context/AuthProvider";
+import StoreProvider from "../storeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,10 +27,12 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
           rel="stylesheet"
-        />{" "}
+        />
       </head>
       <AuthProvider>
-        <body className={inter.className}>{children}</body>
+        <StoreProvider>
+          <body className={inter.className}>{children}</body>
+        </StoreProvider>
       </AuthProvider>
     </html>
   );

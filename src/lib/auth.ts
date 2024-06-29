@@ -21,7 +21,7 @@ export const signUp = async (
       password,
       confirmPassword,
     });
-    console.log("This is the response data ok ", response.data);
+    // console.log("This is the response data ok ", response.data);
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
@@ -32,7 +32,7 @@ export const signUp = async (
           axiosError.response.status,
           axiosError.response.data
         );
-        throw new Error(axiosError.response.data.message || "SignUp failed");
+        throw new Error(axiosError?.response?.data?.message || "SignUp failed");
       } else if (axiosError.request) {
         console.error(
           "Request made but no response received",

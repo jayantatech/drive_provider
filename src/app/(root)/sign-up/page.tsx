@@ -63,7 +63,7 @@ const Signup = () => {
       signUpSchema.parse(userInfo);
 
       const response = await axios.post("/api/sign-up", userInfo);
-      console.log("Response from server:", response.data);
+      // // console.log("Response from server:", response.data);
       empetyFild();
       // Handle success scenario
       router.push("/login");

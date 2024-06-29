@@ -2,6 +2,11 @@ import { auth } from "@/auth/auth";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import ReviewsSection from "@/components/reviewsSection/ReviewsSection";
+import { homeTitles } from "@/contants/Contants";
+import {
+  offeringCities,
+  offeringVehicleTypes,
+} from "@/contants/MainDependency";
 import TestimonialsNewSection from "@/pages/about/TestimonialsNewSection";
 import BrandsAndCarsModels from "@/pages/home/BrandsAndCarsModels";
 import { HeroSection } from "@/pages/home/HeroSection";
@@ -24,37 +29,34 @@ export default async function Home() {
       <HeroSectionTwo />
       <BrandsAndCarsModels />
       <PopularCarsSection
-        titleMain="Top"
-        titleBody="Rental Picks"
-        titleDescription=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quam quasi facere aperiam sequi. Autem reiciendis nobis numquam magni tenetur!"
-        vehicleModes={["cars", "bikes"]}
+        titleMain={homeTitles.first_Main_Section.mainTitleWord as string}
+        titleBody={homeTitles.first_Main_Section.mainTitleBody}
+        titleDescription={homeTitles.first_Main_Section.description}
+        vehicleModes={offeringVehicleTypes}
         selectItems={{
           placeHolder: "location",
           selectLabel: "Select Your City",
-          selectItems: ["Kolkata", "Bangaluru"],
+          selectItems: offeringCities,
         }}
       />
       <PopularCarsSection
-        titleMain="Exclusive"
-        titleBody="Rental Deals"
-        titleDescription=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quam quasi facere aperiam sequi. Autem reiciendis nobis numquam magni tenetur!"
-        vehicleModes={["cars", "bikes"]}
+        titleMain={homeTitles.second_Section.mainTitleWord as string}
+        titleBody={homeTitles.second_Section.mainTitleBody}
+        titleDescription={homeTitles.second_Section.description}
+        vehicleModes={offeringVehicleTypes}
         selectItems={{
           placeHolder: "location",
           selectLabel: "Select Your City",
-          selectItems: ["Kolkata", "Bangaluru"],
+          selectItems: offeringCities,
         }}
       />
 
       <WhyUsSection />
       <RentersImgesSection />
-      {/* <TestimonialsSection /> */}
       <TestimonialsNewSection />
       <NewsAndPostSection />
       <SpecialOffSection />
       <Footer />
-
-      {/* <div className="h-[750px]"></div> */}
     </>
   );
 }
