@@ -11,6 +11,7 @@ import UserOne from "./user1.jpg";
 import UserTwo from "./user2.jpg";
 import UserThree from "./user3.jpg";
 import avatar_Team from "./avatar_Team.png";
+import Founder_Image from "./Founder_Image.jpg";
 
 export {
   CarKey,
@@ -26,4 +27,5 @@ export {
   UserTwo,
   UserThree,
   avatar_Team,
+  Founder_Image,
 };
