@@ -17,8 +17,8 @@ const page = () => {
         pageTitle="Contact"
         key={"contact"}
       />
-      <GetInTouchSection />
       <ContactInfoSection />
+      <GetInTouchSection />
       <SpecialOffSection />
       <Footer />
     </div>

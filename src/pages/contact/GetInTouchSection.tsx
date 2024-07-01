@@ -218,16 +218,16 @@ const GetInTouchSection = () => {
             <div className="w-[90%] max-lg:w-[94%] h-[144px] max-lg:h-[204px] rounded-[6px] bg-color_main absolute bottom-10 left-1/2 transform -translate-x-1/2 px-4 py-3 flex items-start justify-evenly flex-col bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 z-20 gap-2">
               <p className="text-[14px] font-openSans">
                 {" "}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                debitis magnam, vero animi recusandae aperiam nihil reiciendis
-                dolor non maxime expedita cum itaque, alias illum repellendus
-                eaque numquam. Ipsum, quas?
+                Welcome to our car renting platform! We are dedicated to
+                providing you with exceptional service and a seamless rental
+                experience. Your satisfaction is our priority. Thank you for
+                choosing us for your travel needs
               </p>
               <div className="flex flex-col">
                 <span className="text-[18px] font-openSans font-bold">
-                  Jay Biswas
+                  Founder’s Message
                 </span>
-                <span>Softwer enginer</span>
+                <span>Jay Biswas</span>
               </div>
             </div>
           </div>

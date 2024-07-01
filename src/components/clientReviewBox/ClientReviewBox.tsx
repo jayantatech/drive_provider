@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
 import { IoMdStarHalf } from "react-icons/io";
@@ -8,7 +8,7 @@ type ClientReviewBoxProps = {
   userName: string;
   userReview: string;
   userRatings: number;
-  userImage: string;
+  userImage: string | StaticImageData;
   rentedCar: string;
   socialMedia: {
     facebookUrl?: string;
