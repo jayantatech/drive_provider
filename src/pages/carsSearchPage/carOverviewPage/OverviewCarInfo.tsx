@@ -12,12 +12,12 @@ import { LiaCarSideSolid } from "react-icons/lia";
 
 const OverviewCarInfo = () => {
   return (
-    <div className="w-full h-[284px] max-lg:h-[284px] rounded-[6px] shadow-lg bg-white p-4 max-lg:px-3 py-2 my-4 border-2">
+    <div className="w-full h-[284px] max-lg:h-[284px] max-md:h-auto rounded-[6px] shadow-lg bg-white p-4 max-lg:px-3 py-2 my-4 border-2">
       <h3 className="text-[22px] max-lg:text-[20px] font-raleway font-bold pb-2">
         Car Overview
       </h3>
-      <div className="w-full h-[210px] flex items-center flex-row gap-[58px] max-lg:gap-[22px]">
-        <div className="w-1/2 h-full flex flex-col items-center justify-between">
+      <div className="w-full h-[210px] flex items-center flex-row gap-[58px] max-md:gap-0 max-lg:gap-[22px] max-md:flex-col max-md:h-auto">
+        <div className="w-1/2 max-md:w-full h-full flex flex-col items-center justify-between ">
           <div className="w-full h-[36px] flex items-center justify-between">
             <div className="flex items-center justify-start gap-2">
               <LuCalendar className="text-[16px] max-lg:text-[15px]" />
@@ -78,7 +78,7 @@ const OverviewCarInfo = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 h-full flex flex-col items-center justify-between">
+        <div className="w-1/2 max-md:w-full h-full flex flex-col items-center justify-between">
           <div className="w-full h-[36px] flex items-center justify-between">
             <div className="flex items-center justify-start gap-2">
               <BsFuelPump className="text-[16px] max-lg:text-[15px]" />

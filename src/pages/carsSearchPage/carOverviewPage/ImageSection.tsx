@@ -22,7 +22,7 @@ export default function ImageSection() {
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
-            <div className="w-full h-[458px] max-lg:h-[340px] bg-red-200 rounded-[6px] overflow-hidden relative">
+            <div className="w-full h-[458px] max-lg:h-[340px] max-md:h-[240px] bg-red-200 rounded-[6px] overflow-hidden relative">
               <Image
                 src={Black_Car}
                 alt="Car_Image_Slider"

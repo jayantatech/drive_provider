@@ -27,6 +27,7 @@ const config = {
         blue_deep_light: "#B5C0F9",
         black_main: "#161921",
         black_light: "#252933",
+        star_color: "#FFD700", // start color code
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
