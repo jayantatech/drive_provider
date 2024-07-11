@@ -120,7 +120,9 @@ const FilterSidebar = () => {
         >
           <option value="Any">Any</option>
           {carBrands?.map((item) => (
-            <option value={`${item.title}`}>{item.title}</option>
+            <option key={item.title} value={`${item.title}`}>
+              {item.title}
+            </option>
           ))}
         </select>
       </div>

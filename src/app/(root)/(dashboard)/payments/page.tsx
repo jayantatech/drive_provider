@@ -25,9 +25,9 @@ const PaymentPage = () => {
 
   return (
     <div className="relative">
-      <section className="flex min-h-screen flex-1 flex-col pt-2 px-4 pb-4">
+      <section className="flex h-auto w-full flex-1 flex-col pt-2 md:px-4 pb-4">
         <h1 className="text-2xl font-bold mb-4">Payment Methods</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-lg gap-4 max-md:justify-items-center w-full h-auto">
           {cards.map((card) => (
             <div
               key={card.number}
@@ -78,22 +78,22 @@ const PaymentPage = () => {
               Invoice
             </span>
           </div>
-          <div className="w-[15%] h-full flex items-center justify-start">
+          <div className="w-[15%] max-md:w-[25%] h-full flex items-center justify-start">
             <span className="text-[14px] font-semibold font-raleway text-slate-700">
               Date
             </span>
           </div>
-          <div className="w-[15%] h-full flex items-center justify-start">
+          <div className="w-[15%] h-full flex items-center justify-start max-md:hidden">
             <span className="text-[14px] font-semibold font-raleway text-slate-700">
               Amout
             </span>
           </div>
-          <div className="w-[15%] h-full flex items-center justify-start">
+          <div className="w-[15%] h-full flex items-center justify-start max-md:hidden">
             <span className="text-[14px] font-semibold font-raleway text-slate-700">
               Pay Method
             </span>
           </div>
-          <div className="w-[15%] h-full flex items-center justify-start">
+          <div className="w-[15%] max-md:w-[25%] h-full flex items-center justify-start">
             <span className="text-[14px] font-semibold font-raleway text-slate-700">
               Status
             </span>
@@ -105,30 +105,33 @@ const PaymentPage = () => {
           </div>
         </div>
         <div className="">
-          {[...Array(2)].map((_, index) => (
-            <div className="w-full h-[44px] bg-white rounded-[6px] shadow-md my-2 flex px-2 mb">
+          {[...Array(1)].map((_, index) => (
+            <div
+              key={index}
+              className="w-full h-[44px] bg-white rounded-[6px] shadow-md my-2 flex px-2 mb"
+            >
               <div className="w-[25%] h-full flex items-center justify-start cursor-pointer">
                 <span className="text-[15px] font-openSans text-color_main font-bold">
                   Invoice A/09
                 </span>
               </div>
-              <div className="w-[15%] h-full flex items-center justify-start">
+              <div className="w-[15%] max-md:w-[25%] h-full flex items-center justify-start">
                 <span className="text-[15px] font-semibold font-openSans text-slate-700">
                   20/10/2024
                 </span>
               </div>
-              <div className="w-[15%] h-full flex items-center justify-start">
+              <div className="w-[15%] h-full flex items-center justify-start max-md:hidden">
                 <span className="text-[15px] font-semibold font-openSans text-slate-700">
                   <p className="font-semibold">$143.00</p>
                 </span>
               </div>
-              <div className="w-[15%] h-full flex items-center justify-start gap-1">
+              <div className="w-[15%] h-full flex items-center justify-start gap-1 max-md:hidden">
                 <FaRegCreditCard className="text-[18px]" />
                 <span className="text-[15px] font-semibold font-openSans text-slate-700">
                   **** 1448
                 </span>
               </div>
-              <div className="w-[15%] h-full flex items-center justify-start">
+              <div className="w-[15%] max-md:w-[25%] h-full flex items-center justify-start">
                 <span className="text-[15px] font-semibold font-openSans text-white bg-green-500 px-2 py-[1px] rounded-[6px]">
                   Paid
                 </span>

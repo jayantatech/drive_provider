@@ -1,18 +1,27 @@
-import clientPromise from "@/lib/db";
-import NextAuth from "next-auth";
+import NextAuth, { AuthOptions, DefaultSession, Session } from "next-auth";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
-import google from "next-auth/providers/google";
+import clientPromise from "@/lib/db";
 import CredentialsProvider from "next-auth/providers/credentials";
-import UserModel from "@/model/User";
+import google from "next-auth/providers/google";
+import UserModel from "@/lib/model/User";
 import bcrypt from "bcryptjs";
 import dbConnect from "@/lib/dbConnection";
 
-type User = {
-  id: string;
-  email: string;
-  firstName: string;
-  lastName: string;
-};
+// Define the custom session user type
+declare module "next-auth" {
+  interface Session {
+    user: {
+      id: string;
+      email: string;
+      name: string;
+      image: string;
+    } & DefaultSession["user"];
+  }
+}
+
+const adapter = MongoDBAdapter(
+  clientPromise
+) as unknown as AuthOptions["adapter"];
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -20,16 +29,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       name: "Credentials",
       credentials: {
         email: { label: "Email", type: "text", placeholder: "Email" },
-        password: {
-          label: "Password",
-          type: "password",
-        },
+        password: { label: "Password", type: "password" },
       },
-      async authorize(credentials, req): Promise<User | null> {
+      async authorize(credentials, req) {
         if (!credentials?.email || !credentials?.password) {
           throw new Error("Missing credentials");
         }
-
         await dbConnect();
         await clientPromise;
 
@@ -53,10 +58,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           }
 
           return {
-            id: user?._id?.toString() as string,
+            id: user.id.toString(),
             email: user.email,
             firstName: user.firstName,
             lastName: user.lastName,
+            location: user.location,
+            role: user.role,
           };
         }
 
@@ -68,9 +75,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       clientSecret: process.env.AUTH_GOOGLE_SECRET as string,
     }),
   ],
-
   secret: process.env.AUTH_SECRET,
-  adapter: MongoDBAdapter(clientPromise),
+  adapter: adapter,
   session: { strategy: "jwt" },
   callbacks: {
     async jwt({ token, user }) {
@@ -79,7 +85,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       }
       return token;
     },
-
     async session({ session, token }) {
       if (token && session.user) {
         session.user.id = token.id as string;

@@ -7,8 +7,11 @@ const FeaturesSection = () => {
         Features
       </h3>
       <div className="w-full h-[128px] max-lg:h-[174px]  grid grid-flow-row grid-cols-3 max-lg:grid-cols-2 grid-rows-2 max-lg:grid-rows-3 gap-2 content-start">
-        {[...Array(4)].map((item) => (
-          <div className="col-span-1 row-span-1 h-auto  flex items-center justify-start gap-2">
+        {[...Array(4)].map((item, index) => (
+          <div
+            key={index}
+            className="col-span-1 row-span-1 h-auto  flex items-center justify-start gap-2"
+          >
             <div className="w-[20px] h-auto">
               <MdFileDownloadDone className="text-[20px] max-lg:text-[18px] text-color_main" />
             </div>

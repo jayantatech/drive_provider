@@ -4,7 +4,7 @@ import ContentWrapper from "@/components/contentWrapper/ContentWrapper";
 import Header from "@/components/header/Header";
 import { Car_People } from "@/contants/img/cars/img";
 import { GoogleIcone } from "@/contants/img/icons/icons";
-import { signUpSchema } from "@/schemas/signUpSchema";
+import { signUpSchema } from "@/lib/schemas/signUpSchema";
 import axios from "axios";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -63,9 +63,7 @@ const Signup = () => {
       signUpSchema.parse(userInfo);
 
       const response = await axios.post("/api/sign-up", userInfo);
-      // // console.log("Response from server:", response.data);
       empetyFild();
-      // Handle success scenario
       router.push("/login");
     } catch (error) {
       if (error instanceof z.ZodError) {

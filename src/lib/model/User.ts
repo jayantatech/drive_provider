@@ -1,11 +1,14 @@
 import mongoose, { Schema, Document } from "mongoose";
 import bcrypt from "bcryptjs";
+type AdminRole = "user" | "admin" | "superadmin" | "support" | "developer";
+
 interface IUser extends Document {
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
   location: string;
+  role: AdminRole;
   password: string;
   bookingHistory: Schema.Types.ObjectId[];
   createdAt: Date;
@@ -24,6 +27,11 @@ const userSchema = new Schema<IUser>({
   },
   phone: { type: String, required: true, match: [/^\d{10,15}$/, "is invalid"] },
   location: { type: String, required: true },
+  role: {
+    type: String,
+    enum: ["user", "admin", "superadmin", "support", "developer"],
+    default: "user",
+  },
   password: { type: String, required: true, unique: true },
   bookingHistory: [{ type: Schema.Types.ObjectId, ref: "Booking" }],
   createdAt: { type: Date, default: Date.now },

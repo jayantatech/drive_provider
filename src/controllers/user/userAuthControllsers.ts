@@ -1,6 +1,6 @@
 import dbConnect from "@/lib/dbConnection";
-import UserModel from "@/model/User";
-import { signUpSchema } from "@/schemas/signUpSchema";
+import UserModel from "@/lib/model/User";
+import { signUpSchema } from "@/lib/schemas/signUpSchema";
 import { NextFunction, Request, Response } from "express";
 
 export const signUp = async (
@@ -9,10 +9,8 @@ export const signUp = async (
   next: NextFunction
 ): Promise<object> => {
   await dbConnect();
-  // console.log(req.body);
   try {
     const signUpInfo = await req.body;
-
     const {
       firstName,
       lastName,

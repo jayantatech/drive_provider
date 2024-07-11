@@ -12,6 +12,8 @@ import UserTwo from "./user2.jpg";
 import UserThree from "./user3.jpg";
 import avatar_Team from "./avatar_Team.png";
 import Founder_Image from "./Founder_Image.jpg";
+import Car_Key_Image from "./car_keys.jpg";
+import Car_Key_person_Image from "./car_key_person.jpg";
 
 export {
   CarKey,
@@ -28,4 +30,6 @@ export {
   UserThree,
   avatar_Team,
   Founder_Image,
+  Car_Key_Image,
+  Car_Key_person_Image,
 };

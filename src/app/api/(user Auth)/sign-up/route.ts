@@ -1,6 +1,6 @@
 import dbConnect from "@/lib/dbConnection";
-import UserModel from "@/model/User";
-import { signUpSchema } from "@/schemas/signUpSchema";
+import UserModel from "@/lib/model/User";
+import { signUpSchema } from "@/lib/schemas/signUpSchema";
 
 export async function POST(request: Request) {
   await dbConnect();
@@ -31,6 +31,7 @@ export async function POST(request: Request) {
       email,
       phone,
       location,
+      role: "user",
       password,
       confirmPassword,
     });

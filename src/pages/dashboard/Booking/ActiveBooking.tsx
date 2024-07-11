@@ -13,12 +13,12 @@ import { usePathname } from "next/navigation";
 const ActiveBooking = () => {
   return (
     <>
-      <div className="w-full h-auto mb-2 py-1">
+      <div className="w-full h-auto mb-2 py-1 max-md:text-center">
         <span className=" px-2 h-[34px] w-full bg-color_main text-white font-raleway text-[14px] py-1 font-bold rounded-[4px]">
           Active Bookings
         </span>
       </div>
-      <div className="w-full h-auto flex justify-start gap-5 items-center flex-row flex-wrap ">
+      <div className="w-full h-auto flex justify-start gap-5 items-center flex-row flex-wrap max-md:justify-center">
         <ActiveCarComponetBox />
         <ActiveCarComponetBox />
         <ActiveCarComponetBox />

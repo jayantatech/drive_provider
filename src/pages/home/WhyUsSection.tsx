@@ -49,6 +49,7 @@ const WhyUsSection = () => {
                 <div className="w-full h-[380px] py-2 flex flex-col gap-3">
                   {homeTitles.third_Sub_Section.keyPoints.map((item) => (
                     <WhyUsBox
+                      key={item.title}
                       number={item.number}
                       title={item.title}
                       description={item.description}

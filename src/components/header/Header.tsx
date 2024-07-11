@@ -8,26 +8,35 @@ import HeaderNavOptions from "../headerNavOptions/HeaderNavOptions";
 import LoginAndSignUpButton from "../loginAndSignUpButton/LoginAndSignUpButton";
 import { DropdownAccount } from "../dropdownAccount/DropdownAccount";
 import Link from "next/link";
-import { getSessionData } from "@/auth/actions";
 import { Session } from "next-auth";
 import { useSession } from "next-auth/react";
+import axios from "axios";
+import { verifyJwtToken } from "@/utils/jwt";
 
 const Header = ({ className }: { className?: string }) => {
   const [session, setSession] = useState<Session | null>(null);
+  const [decodedToken, setDecodedToken] = useState<any>(null);
+
   const { data: sessionData } = useSession();
-  useEffect(() => {
-    const fetchSessionData = async () => {
-      const sessionData = await getSessionData();
-      setSession(sessionData);
-      // // console.log("This is the session", sessionData);
-    };
 
-    fetchSessionData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchAndVerifyToken = async () => {
+  //     try {
+  //       const response = await axios.get("/api/token");
+  //       const token = response.data.token;
+  //       console.log("This is teh token ", token);
+  //       const decoded = await verifyJwtToken(token);
+  //       console.log("This is teh decoded ", decoded);
 
-  if (sessionData) {
-    // // console.log("User session data is jjj", sessionData.user);
-  }
+  //       return decoded;
+  //     } catch (error) {
+  //       console.error("Error verifying token:", error);
+  //       return null;
+  //     }
+  //   };
+
+  //   fetchAndVerifyToken();
+  // }, []);
 
   return (
     <header

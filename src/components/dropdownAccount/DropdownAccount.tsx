@@ -17,9 +17,21 @@ import {
   LuUser,
 } from "react-icons/lu";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
 export const DropdownAccount = ({ userInfo }: { userInfo: object }) => {
   const navitagion = useRouter();
+
+  function logoutHandler() {
+    console.log("it is working");
+    try {
+      const response = axios.post("/api/logout");
+      // console.log("this is the response", response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -57,7 +69,10 @@ export const DropdownAccount = ({ userInfo }: { userInfo: object }) => {
           <LuMessageCircle className="text-[20px]" />
           <span className="text-[16px] font-raleway font-bold">Fedback</span>
         </div>
-        <div className="w-full h-[34px] border-2 text-white flex items-center justify-start gap-1 rounded-[6px] pl-5 cursor-pointer">
+        <div
+          className="w-full h-[34px] border-2 text-white flex items-center justify-start gap-1 rounded-[6px] pl-5 cursor-pointer"
+          onClick={logoutHandler}
+        >
           <LuLogOut className="text-[20px]" />
           <span className="text-[16px] font-raleway font-bold">Logout</span>
         </div>
